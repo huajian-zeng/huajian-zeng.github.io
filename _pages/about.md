@@ -37,7 +37,7 @@ My research interests focus on 3D computer vision and human/hand-object interact
 <div id="news-container">
 <ul>
 <li><em>2025.08</em>: &nbsp;Move to Abu Dhabi and join MBZUAI as a PhD student.</li>
-<li><em>2025.06</em>: &nbsp;🎉 Our paper on 2nd version of arena benchmark got accepted in <a href="https://www.iros25.org/">IROS 2025</a> in Hangzhou, China.</li>a
+<li><em>2025.06</em>: &nbsp;🎉 Our paper on 2nd version of arena benchmark got accepted in <a href="https://www.iros25.org/">IROS 2025</a> in Hangzhou, China.</li>
 <li><em>2025.05</em>: &nbsp;We organized the <a href="https://linhdoan.io/arena-challenge/">Arena 2025 challenge</a> of <a href="https://socialnav2025.pages.dev/">ICRA 2025 workshop Advances in Social Navigation: Planning, HRI and Beyond</a>.</li>
 <li><em>2025.04</em>: &nbsp;🎉 Our paper on 5th version of arena platform got accepted in <a href="https://roboticsconference.org/2025/">RSS 2025</a> in Los Angeles, USA.</li>
 <li><em>2025.01</em>: &nbsp;🎉 Our paper on 4th version of arena platform got accepted in <a href="https://2025.ieee-icra.org/">ICRA 2025</a> in Atlanta, USA.</li>
