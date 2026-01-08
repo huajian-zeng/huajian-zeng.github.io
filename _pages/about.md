@@ -36,6 +36,7 @@ My research interests focus on 3D computer vision and human/hand-object interact
 # 🔥 News
 <div id="news-container">
 <ul>
+<li><em>2025.11</em>: &nbsp;🎉 Our paper on object trajectory prediction got accepted in <a href="https://3dvconf.github.io/2026/">3DV 2026</a> in Vancouver, Canada.</li>
 <li><em>2025.08</em>: &nbsp;Move to Abu Dhabi and join MBZUAI as a PhD student.</li>
 <li><em>2025.06</em>: &nbsp;🎉 Our paper on 2nd version of arena benchmark got accepted in <a href="https://www.iros25.org/">IROS 2025</a> in Hangzhou, China.</li>
 <li><em>2025.05</em>: &nbsp;We organized the <a href="https://linhdoan.io/arena-challenge/">Arena 2025 challenge</a> of <a href="https://socialnav2025.pages.dev/">ICRA 2025 workshop Advances in Social Navigation: Planning, HRI and Beyond</a>.</li>
@@ -135,6 +136,25 @@ function toggleBibtex(element) {
 
 <!-- pub with images -->
 
+<!-- 9 -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">3DV 2026</div><img src='images/3dv26_gmt.png' alt="sym" width="500" height="300"></div></div>
+<div class='paper-box-text' markdown="1">
+
+**GMT: Goal-Conditioned Multimodal Transformer for 6-DOF Object Trajectory Synthesis in 3D Scenes**
+
+**Huajian Zeng**, Abhishek Saroha, Daniel Cremers, Xi Wang
+
+Details coming soon
+<!-- [[webpage]](https://github.com/Arena-Rosnav)
+[[pdf]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11246895)
+<span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
+<span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
+<span class="abstract-content">Social navigation has become increasingly important for robots operating in human environments, yet many newly proposed navigation methods remain narrowly tailored or exist only as proof-of-concept prototypes. Building on our previous work with Arena, a social navigation development platform, we now propose, Arena-Bench 2.0 a comprehensive social navigation benchmark of state-of-the-art planners, fully integrated into the Arena framework. To achieve this, we developed a novel plugin structure—implemented on ROS2—to streamline the integration process and ensure straightforward, efficient workflows. As a demonstration, we integrated various learning-based and model-based navigation approaches and constructed a diverse set of social navigation scenarios to rigorously evaluate each planner. Specifically, we introduce a scenario generation node that allows users to construct complex, realistic social contexts through a web-based interface. We subsequently perform an extensive benchmark of all integrated planners, assessing both navigational and social metrics. Our evaluation also considers factors such as sensor input, reaction time, and latency, enabling insights into which planner may be most appropriate under different circumstances. The findings offer valuable guidance for selecting suitable planners for specific scenarios.</span>
+<span class="bibtex-content">@inproceedings{shcherbyna2025arenabench,<br>  author={Shcherbyna, Volodymyr and Kästner, Linh and Do, Duc Anh and Wang, Jiaming and Nguyen, Huu Giang and Seeger, Tim and Martban, Ahmed and Shen, Zhengcheng and Zeng, Huajian and Trinh, Nhan and Wiese, Eva},<br>  booktitle={2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},<br>  title={Arena-Bench 2.0: A Comprehensive Benchmark of Social Navigation Approaches in Collaborative Environments},<br>  year={2025},<br>  pages={9202-9209},<br>  doi={10.1109/IROS60139.2025.11246895}<br>}</span> -->
+
+</div>
+</div>
+
 <!-- 8 -->
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">IROS 2025</div><img src='images/iros25_super.jpeg' alt="sym" width="500" height="300"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -172,12 +192,12 @@ Volodymyr Shcherbyna\*, Linh Kästner\*, Duc Anh Do, Hoang Tung, Huu Giang Nguye
 </div>
 
 <!-- 6 -->
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">3DV 2025</div><img src='images/coe7.png' alt="sym" width="500" height="300"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">3DV 2025</div><img src='images/3dv25_coe.jpg' alt="sym" width="500" height="300"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [**CoE: Deep Coupled Embedding for Non-Rigid Point Cloud Correspondences**](https://arxiv.org/abs/2412.05557)
 
-**Huajian Zeng\***, Maolin Gao\*, Daniel Cremers
+**Huajian Zeng**, Maolin Gao, Daniel Cremers
 
 [[webpage]](https://huajian-zeng.github.io/projects/coe)
 [[pdf]](https://arxiv.org/pdf/2412.05557)
