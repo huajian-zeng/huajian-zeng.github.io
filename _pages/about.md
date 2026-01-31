@@ -36,6 +36,7 @@ My research interests focus on 3D computer vision and human/hand-object interact
 # 🔥 News
 <div id="news-container">
 <ul>
+<li><em>2026.01</em>: &nbsp;🎉 Our paper on stereo perception of transparent objects got accepted in <a href="https://2026.ieee-icra.org/">ICRA 2026</a> in Vienna, Austria.</li>
 <li><em>2025.11</em>: &nbsp;🎉 Our paper on object trajectory prediction got accepted in <a href="https://3dvconf.github.io/2026/">3DV 2026</a> in Vancouver, Canada.</li>
 <li><em>2025.08</em>: &nbsp;Move to Abu Dhabi and join MBZUAI as a PhD student.</li>
 <li><em>2025.06</em>: &nbsp;🎉 Our paper on 2nd version of arena benchmark got accepted in <a href="https://www.iros25.org/">IROS 2025</a> in Hangzhou, China.</li>
@@ -137,6 +138,24 @@ function toggleBibtex(element) {
 <!-- pub with images -->
 
 <!-- 9 -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICRA 2026</div><img src='images/clear_depth.jpg' alt="sym" width="500" height="300"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[**ClearDepth: Enhanced Stereo Perception of Transparent Objects for Robotic Manipulation**](https://arxiv.org/abs/2409.08926)
+
+Kaixin Bai, **Huajian Zeng**, Lei Zhang, Yiwen Liu, Hongli Xu, Zhaopeng Chen, Jianwei Zhang
+
+[[webpage]](https://sites.google.com/view/cleardepth/)
+[[pdf]](https://arxiv.org/pdf/2409.08926)
+<span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
+<span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
+[[video]](https://www.youtube.com/watch?v=6s5LFnUX7h0)
+<span class="abstract-content">Transparent object depth perception poses a challenge in everyday life and logistics, primarily due to the inability of standard 3D sensors to accurately capture depth on transparent or reflective surfaces. This limitation significantly affects depth map and point cloud-reliant applications, especially in robotic manipulation. We developed a vision transformer-based algorithm for stereo depth recovery of transparent objects. This approach is complemented by an innovative feature post-fusion module, which enhances the accuracy of depth recovery by structural features in images. To address the high costs associated with dataset collection for stereo camera-based perception of transparent objects, our method incorporates a parameter-aligned, domain-adaptive, and physically realistic Sim2Real simulation for efficient data generation, accelerated by AI algorithm. Our experimental results demonstrate the model's exceptional Sim2Real generalizability in real-world scenarios, enabling precise depth mapping of transparent objects to assist in robotic manipulation.</span>
+<span class="bibtex-content">@article{bai2024cleardepth,<br>  title={ClearDepth: enhanced stereo perception of transparent objects for robotic manipulation},<br>  author={Bai, Kaixin and Zeng, Huajian and Zhang, Lei and Liu, Yiwen and Xu, Hongli and Chen, Zhaopeng and Zhang, Jianwei},<br>  journal={arXiv preprint arXiv:2409.08926},<br>  year={2024}<br>}</span>
+</div>
+</div>
+
+<!-- 8 -->
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">3DV 2026</div><img src='images/3dv26_gmt.png' alt="sym" width="500" height="300"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -155,7 +174,7 @@ Details coming soon
 </div>
 </div>
 
-<!-- 8 -->
+<!-- 7 -->
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">IROS 2025</div><img src='images/iros25_super.jpeg' alt="sym" width="500" height="300"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -173,7 +192,7 @@ Volodymyr Shcherbyna\*, Linh Kästner\*, Duc Anh Do, Jiaming Wang, Huu Giang Ngu
 </div>
 </div>
 
-<!-- 7 -->
+<!-- 6 -->
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">RSS 2025</div><img src='images/rss25.jpg' alt="sym" width="500" height="300"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -191,7 +210,7 @@ Volodymyr Shcherbyna\*, Linh Kästner\*, Duc Anh Do, Hoang Tung, Huu Giang Nguye
 </div>
 </div>
 
-<!-- 6 -->
+<!-- 5 -->
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">3DV 2025</div><img src='images/3dv25_coe.jpg' alt="sym" width="500" height="300"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -210,7 +229,7 @@ Volodymyr Shcherbyna\*, Linh Kästner\*, Duc Anh Do, Hoang Tung, Huu Giang Nguye
 </div>
 </div>
 
-<!-- 5 -->
+<!-- 4 -->
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICRA 2025</div><img src='images/Arena4.jpg' alt="sym" width="500" height="300"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -225,24 +244,6 @@ Volodymyr Shcherbyna, Linh Kästner, Diego Diaz, Huu Giang Nguyen, Maximilian Ho
 <span class="abstract-content">Building upon the foundations laid by our previous work, this paper introduces Arena 4.0, a significant advancement of Arena 3.0, Arena-Bench, Arena 1.0, and Arena 2.0. Arena 4.0 provides three main novel contributions: 1) a generative-model-based world and scenario generation approach using large language models (LLMs) and diffusion models, to dynamically generate complex, human-centric environments from text prompts or 2D floorplans that can be used for development and benchmarking of social navigation strategies. 2) A comprehensive 3D model database which can be extended with 3D assets and semantically linked and annotated using a variety of metrics for dynamic spawning and arrangements inside 3D worlds. 3) The complete migration towards ROS 2, which ensures operation with state-of-the-art hardware and functionalities for improved navigation, usability, and simplified transfer towards real robots. We evaluated the platforms performance through a comprehensive user study and its world generation capabilities for benchmarking demonstrating significant improvements in usability and efficiency compared to previous versions. Arena 4.0 is openly available at https://github.com/Arena-Rosnav.</span>
 <span class="bibtex-content">@inproceedings{shcherbyna2025arena,<br>  title={Arena 4.0: A comprehensive ros2 development and benchmarking platform for human-centric navigation using generative-model-based environment generation},<br>  author={Shcherbyna, Volodymyr and Kastner, Linh and Diaz, Diego and Nguyen, Huu Giang and Schreff, Maximilian Ho--Kyoung and Seeger, Tim and Kreutz, Jonas and Martban, Ahmed and Shen, Zhengcheng and Zeng, Huajian and others},<br>  booktitle={2025 IEEE International Conference on Robotics and Automation (ICRA)},<br>  pages={9138--9144},<br>  year={2025},<br>  organization={IEEE}<br>}</span>
 
-</div>
-</div>
-
-<!-- 4 -->
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/clear_depth.jpg' alt="sym" width="500" height="300"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[**ClearDepth: Enhanced Stereo Perception of Transparent Objects for Robotic Manipulation**](https://arxiv.org/abs/2409.08926)
-
-Kaixin Bai, **Huajian Zeng**, Lei Zhang, Yiwen Liu, Hongli Xu, Zhaopeng Chen, Jianwei Zhang
-
-[[webpage]](https://sites.google.com/view/cleardepth/)
-[[pdf]](https://arxiv.org/pdf/2409.08926)
-<span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
-<span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
-[[video]](https://www.youtube.com/watch?v=6s5LFnUX7h0)
-<span class="abstract-content">Transparent object depth perception poses a challenge in everyday life and logistics, primarily due to the inability of standard 3D sensors to accurately capture depth on transparent or reflective surfaces. This limitation significantly affects depth map and point cloud-reliant applications, especially in robotic manipulation. We developed a vision transformer-based algorithm for stereo depth recovery of transparent objects. This approach is complemented by an innovative feature post-fusion module, which enhances the accuracy of depth recovery by structural features in images. To address the high costs associated with dataset collection for stereo camera-based perception of transparent objects, our method incorporates a parameter-aligned, domain-adaptive, and physically realistic Sim2Real simulation for efficient data generation, accelerated by AI algorithm. Our experimental results demonstrate the model's exceptional Sim2Real generalizability in real-world scenarios, enabling precise depth mapping of transparent objects to assist in robotic manipulation.</span>
-<span class="bibtex-content">@article{bai2024cleardepth,<br>  title={ClearDepth: enhanced stereo perception of transparent objects for robotic manipulation},<br>  author={Bai, Kaixin and Zeng, Huajian and Zhang, Lei and Liu, Yiwen and Xu, Hongli and Chen, Zhaopeng and Zhang, Jianwei},<br>  journal={arXiv preprint arXiv:2409.08926},<br>  year={2024}<br>}</span>
 </div>
 </div>
 
@@ -311,7 +312,7 @@ Linh Kästner, Reyk Carstens, **Huajian Zeng**, Jacek Kmiecik, Tuan Anh Le, Teha
 - *2019.10 - 2022.09*, Undergraduate, Computer Engineering, Technical University of Berlin, Berlin.
 
 # 🎖 Honors and Awards
-- *2024.10* Deutschestipendium 2024/2025
+- *2024.10*, Deutschestipendium 2024/2025
 
 # 📚 Academic Services
 - Conference Reviewer: ICRA, IROS
