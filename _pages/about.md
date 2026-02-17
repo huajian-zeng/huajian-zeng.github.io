@@ -36,6 +36,7 @@ My research interests focus on 3D computer vision and human/hand-object interact
 # 🔥 News
 <div id="news-container">
 <ul>
+<li><em>2026.02</em>: &nbsp;🎉 Our latest work on hand-object interaction generation for dexterous robot manipulation is available on <a href="https://arxiv.org/abs/2602.13444">arXiv</a>.</li>
 <li><em>2026.01</em>: &nbsp;🎉 Our paper on stereo perception of transparent objects got accepted in <a href="https://2026.ieee-icra.org/">ICRA 2026</a> in Vienna, Austria.</li>
 <li><em>2025.11</em>: &nbsp;🎉 Our paper on object trajectory prediction got accepted in <a href="https://3dvconf.github.io/2026/">3DV 2026</a> in Vancouver, Canada.</li>
 <li><em>2025.08</em>: &nbsp;Move to Abu Dhabi and join MBZUAI as a PhD student.</li>
@@ -141,16 +142,17 @@ function toggleBibtex(element) {
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='images/flowhoi.gif' alt="sym" width="500" height="300"></div></div>
 <div class='paper-box-text' markdown="1">
 
-**FlowHOI: Flow-based Semantics-Grounded Generation of Hand-Object Interactions for Dexterous Robot Manipulation**
+[**FlowHOI: Flow-based Semantics-Grounded Generation of Hand-Object Interactions for Dexterous Robot Manipulation**](https://arxiv.org/abs/2602.13444)
 
 **Huajian Zeng**, Lingyun Chen, Jiaqi Yang, Yuantai Zhang, Fan Shi, Peidong Liu, Xingxing Zuo
 
 [[webpage]](https://huajian-zeng.github.io/projects/flowhoi)
+[[pdf]](https://arxiv.org/pdf/2602.13444)
 <span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
 <span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
 [[video]](https://youtu.be/c_ayPvccyi8)
 <span class="abstract-content">Recent vision-language-action (VLA) models can generate plausible end-effector motions, yet they often fail in long-horizon, contact-rich tasks because the underlying hand-object interaction (HOI) structure is not explicitly represented. We propose FlowHOI, a two-stage flow-matching framework that generates semantically grounded, temporally coherent HOI sequences, comprising hand poses, object poses, and hand-object contact states, conditioned on an egocentric observation, a language instruction, and a 3D Gaussian splatting (3DGS) scene reconstruction. We decouple geometry-centric grasping from semantics-centric manipulation, conditioning the latter on compact 3D scene tokens and a motion–text alignment loss to semantically ground the generated interactions in both the physical scene layout and the language instruction. To address the scarcity of high-fidelity HOI supervision, we introduce a reconstruction pipeline that recovers aligned hand-object trajectories and meshes from large-scale egocentric videos, yielding an HOI prior for robust generation. Across the GRAB and HOT3D benchmarks, FlowHOI achieves the highest action recognition accuracy and a 1.7× higher physics simulation success rate than the strongest diffusion-based baseline, while delivering a 40× inference speedup. We further demonstrate real-robot execution on four dexterous manipulation tasks, illustrating the feasibility of retargeting generated HOI representations to real-robot execution pipelines.</span>
-<span class="bibtex-content">@article{zeng2026flowhoi,<br>  title={FlowHOI: Flow-based Semantics-Grounded Generation of Hand-Object Interactions for Dexterous Robot Manipulation},<br>  author={Zeng, Huajian and Chen, Lingyun and Yang, Jiaqi and Zhang, Yuantai and Shi, Fan and Liu, Peidong and Zuo, Xingxing},<br>  year={2026}<br>}</span>
+<span class="bibtex-content">@article{zeng2026flowhoi,<br>  title={FlowHOI: Flow-based Semantics-Grounded Generation of Hand-Object Interactions for Dexterous Robot Manipulation},<br>  author={Zeng, Huajian and Chen, Lingyun and Yang, Jiaqi and Zhang, Yuantai and Shi, Fan and Liu, Peidong and Zuo, Xingxing},<br>  journal={arXiv preprint arXiv:2602.13444},<br>  year={2026}<br>}</span>
 
 </div>
 </div>
@@ -179,15 +181,15 @@ Kaixin Bai, **Huajian Zeng**, Lei Zhang, Yiwen Liu, Hongli Xu, Zhaopeng Chen, Ji
 
 **GMT: Goal-Conditioned Multimodal Transformer for 6-DOF Object Trajectory Synthesis in 3D Scenes**
 
-**Huajian Zeng**, Abhishek Saroha, Daniel Cremers, Xi Wang
+**Huajian Zeng**\*, Abhishek Saroha\*, Daniel Cremers, Xi Wang
 
-Details coming soon
-<!-- [[webpage]](https://github.com/Arena-Rosnav)
-[[pdf]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11246895)
+[[webpage]](https://huajian-zeng.github.io/projects/gmt)
 <span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
 <span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
-<span class="abstract-content">Social navigation has become increasingly important for robots operating in human environments, yet many newly proposed navigation methods remain narrowly tailored or exist only as proof-of-concept prototypes. Building on our previous work with Arena, a social navigation development platform, we now propose, Arena-Bench 2.0 a comprehensive social navigation benchmark of state-of-the-art planners, fully integrated into the Arena framework. To achieve this, we developed a novel plugin structure—implemented on ROS2—to streamline the integration process and ensure straightforward, efficient workflows. As a demonstration, we integrated various learning-based and model-based navigation approaches and constructed a diverse set of social navigation scenarios to rigorously evaluate each planner. Specifically, we introduce a scenario generation node that allows users to construct complex, realistic social contexts through a web-based interface. We subsequently perform an extensive benchmark of all integrated planners, assessing both navigational and social metrics. Our evaluation also considers factors such as sensor input, reaction time, and latency, enabling insights into which planner may be most appropriate under different circumstances. The findings offer valuable guidance for selecting suitable planners for specific scenarios.</span>
-<span class="bibtex-content">@inproceedings{shcherbyna2025arenabench,<br>  author={Shcherbyna, Volodymyr and Kästner, Linh and Do, Duc Anh and Wang, Jiaming and Nguyen, Huu Giang and Seeger, Tim and Martban, Ahmed and Shen, Zhengcheng and Zeng, Huajian and Trinh, Nhan and Wiese, Eva},<br>  booktitle={2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},<br>  title={Arena-Bench 2.0: A Comprehensive Benchmark of Social Navigation Approaches in Collaborative Environments},<br>  year={2025},<br>  pages={9202-9209},<br>  doi={10.1109/IROS60139.2025.11246895}<br>}</span> -->
+[[code]](https://github.com/huajian-zeng/gmt)
+[[video]](https://youtu.be/Ojl_Rh74J5U)
+<span class="abstract-content">Synthesizing controllable 6-DOF object manipulation trajectories in 3D environments is essential for enabling robots to interact with complex scenes, yet remains challenging due to the need for accurate spatial reasoning, physical feasibility, and multimodal scene understanding. Existing approaches often rely on 2D or partial 3D representations, limiting their ability to capture full scene geometry and constraining trajectory precision. We present GMT, a multimodal transformer framework that generates realistic and goal-directed object trajectories by jointly leveraging 3D bounding box geometry, point cloud context, semantic object categories, and target end poses. The model represents trajectories as continuous 6-DOF pose sequences and employs a tailored conditioning strategy that fuses geometric, semantic, contextual, and goal-oriented information. Extensive experiments on synthetic and real-world benchmarks demonstrate that GMT outperforms state-of-the-art human motion and human-object interaction baselines, such as CHOIS and GIMO, achieving substantial gains in spatial accuracy and orientation control. Our method establishes a new benchmark for learning-based manipulation planning and shows strong generalization to diverse objects and cluttered 3D environments.</span>
+<span class="bibtex-content">@inproceedings{zeng2026gmt,<br>  title={GMT: Goal-Conditioned Multimodal Transformer for 6-DOF Object Trajectory Synthesis in 3D Scenes},<br>  author={Zeng, Huajian and Saroha, Abhishek and Cremers, Daniel and Wang, Xi},<br>  booktitle={International Conference on 3D Vision (3DV)},<br>  year={2026}<br>}</span>
 
 </div>
 </div>
