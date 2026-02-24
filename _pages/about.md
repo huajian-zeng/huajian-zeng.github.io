@@ -45,20 +45,20 @@ My research interests focus on 3D computer vision and human/hand-object interact
 <li><em>2025.04</em>: &nbsp;🎉 Our paper on 5th version of arena platform got accepted in <a href="https://roboticsconference.org/2025/">RSS 2025</a> in Los Angeles, USA.</li>
 <li><em>2025.01</em>: &nbsp;🎉 Our paper on 4th version of arena platform got accepted in <a href="https://2025.ieee-icra.org/">ICRA 2025</a> in Atlanta, USA.</li>
 <li><em>2024.11</em>: &nbsp;🎉 Our paper on embedding learning for point clouds got accepted in <a href="https://3dvconf.github.io/2025/">3DV 2025</a> in Singapore.</li>
-<li class="hidden-news"><em>2024.04</em>: &nbsp;🎉 Our paper on 3rd version of arena platform got accepted in <a href="https://roboticsconference.org/2024/">RSS 2024</a> in Delft, Netherlands.</li>
-<li class="hidden-news"><em>2023.07</em>: &nbsp;I join Agile Robots <img src='./images/agile.jpg' width="20"> as a compter vision intern in Munich.</li>
-<li class="hidden-news"><em>2023.06</em>: &nbsp;🎉 Our paper on Arena-Rosnav 2.0 platform got accepted in <a href="https://ieee-iros.org/">IROS 2023</a> in Detroit, USA.</li>
-<li class="hidden-news"><em>2023.04</em>: &nbsp;🎉 Our paper on 2D DRL-based robot navigation simulator got accepted in <a href="http://2023.ubiquitousrobots.org/">Ubiquitous Robots 2023</a> in Honolulu, USA.</li>
-<li class="hidden-news"><em>2022.10</em>: &nbsp;Move to Munich and started my master's study at TUM.</li>
+<li><em>2024.04</em>: &nbsp;🎉 Our paper on 3rd version of arena platform got accepted in <a href="https://roboticsconference.org/2024/">RSS 2024</a> in Delft, Netherlands.</li>
+<li><em>2023.07</em>: &nbsp;I join Agile Robots <img src='./images/agile.jpg' width="20"> as a compter vision intern in Munich.</li>
+<li><em>2023.06</em>: &nbsp;🎉 Our paper on Arena-Rosnav 2.0 platform got accepted in <a href="https://ieee-iros.org/">IROS 2023</a> in Detroit, USA.</li>
+<li><em>2023.04</em>: &nbsp;🎉 Our paper on 2D DRL-based robot navigation simulator got accepted in <a href="http://2023.ubiquitousrobots.org/">Ubiquitous Robots 2023</a> in Honolulu, USA.</li>
+<li><em>2022.10</em>: &nbsp;Move to Munich and started my master's study at TUM.</li>
 </ul>
 <span id="news-toggle" onclick="toggleNews()">Show more</span>
 </div>
 
 <style>
-#news-container .hidden-news {
+#news-container ul li:nth-child(n+7) {
   display: none;
 }
-#news-container.expanded .hidden-news {
+#news-container.expanded ul li:nth-child(n+7) {
   display: list-item;
 }
 #news-toggle {
