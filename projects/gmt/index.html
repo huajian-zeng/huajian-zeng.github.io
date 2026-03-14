@@ -37,9 +37,9 @@
           <h1 class="title is-1 publication-title">GMT: Goal-Conditioned Multimodal Transformer for 6-DOF Object Trajectory Synthesis in 3D Scenes</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://huajian-zeng.github.io/">Huajian Zeng</a><sup>1,4,*</sup>,</span>
+              <a href="https://huajian-zeng.github.io/">Huajian Zeng</a><sup>1,4</sup>,</span>
             <span class="author-block">
-              <a href="https://cvg.cit.tum.de/members/saroha">Abhishek Saroha</a><sup>1,2,*</sup>,</span>
+              <a href="https://cvg.cit.tum.de/members/saroha">Abhishek Saroha</a><sup>1,2</sup>,</span>
             <span class="author-block">
               <a href="https://vision.in.tum.de/members/cremers">Daniel Cremers</a><sup>1,2</sup>,</span>
             <span class="author-block">
@@ -55,10 +55,6 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>*</sup>Equal contribution</span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
             <span class="author-block"><b>3DV 2026</b></span>
           </div>
 
@@ -66,7 +62,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="#"
+                <a href="./3dv2026_arxiv.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -85,7 +81,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://youtu.be/uYZzJsfn_T4"
+                <a href="https://youtu.be/SJvrltnv2tQ"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -116,7 +112,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <div class="publication-video">
-        <iframe src="https://www.youtube.com/embed/uYZzJsfn_T4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; aspect-ratio: 16 / 9;"></iframe>
+        <iframe src="https://www.youtube.com/embed/SJvrltnv2tQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; aspect-ratio: 16 / 9;"></iframe>
       </div>
       <h2 class="subtitle has-text-centered">
         Given an observed trajectory, scene context, and action description, GMT predicts plausible future 6-DOF object trajectories.
@@ -153,7 +149,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Pipeline Overview</h2>
         <div class="content has-text-justified">
-          <img src="./static/images/overview.png" alt="Pipeline Overview">
+          <img src="./method.png" alt="Pipeline Overview">
           <p>
             Given an observed trajectory and scene context, our model predicts future 6-DOF object trajectories conditioned on a specified goal state. The pipeline consists of:
           </p>
@@ -201,6 +197,20 @@
       </div>
     </div>
     <!--/ Hand Tracking. -->
+
+    <!-- 3D Bounding Box Extraction. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">3D Bounding Box Extraction for HD-EPIC</h2>
+        <div class="content has-text-justified">
+          <img src="./supp_hdepic_bbox.png" alt="3D Bounding Box Extraction Pipeline for HD-EPIC">
+          <p>
+            HD-EPIC lacks 3D bounding box annotations for scene objects. We recover them automatically: given a 2D annotation mask, we filter 3D point correspondences using depth estimates from Unik3D and back-project them into 3D space, then fit a 3D bounding box to the filtered point cloud.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ 3D Bounding Box Extraction. -->
 
     <!-- More Qualitative Results. -->
     <div class="columns is-centered has-text-centered">

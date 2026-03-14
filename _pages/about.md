@@ -181,7 +181,7 @@ Kaixin Bai, **Huajian Zeng**, Lei Zhang, Yiwen Liu, Hongli Xu, Zhaopeng Chen, Ji
 
 **GMT: Goal-Conditioned Multimodal Transformer for 6-DOF Object Trajectory Synthesis in 3D Scenes**
 
-**Huajian Zeng**\*, Abhishek Saroha\*, Daniel Cremers, Xi Wang
+**Huajian Zeng**, Abhishek Saroha, Daniel Cremers, Xi Wang
 
 [[webpage]](https://huajian-zeng.github.io/projects/gmt)
 <span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
