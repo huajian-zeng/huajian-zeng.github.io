@@ -184,6 +184,7 @@ Kaixin Bai, **Huajian Zeng**, Lei Zhang, Yiwen Liu, Hongli Xu, Zhaopeng Chen, Ji
 **Huajian Zeng**, Abhishek Saroha, Daniel Cremers, Xi Wang
 
 [[webpage]](https://huajian-zeng.github.io/projects/gmt)
+[[arxiv]](https://arxiv.org/abs/2603.17993)
 <span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
 <span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
 [[code]](https://github.com/huajian-zeng/gmt)
