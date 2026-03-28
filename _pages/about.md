@@ -179,12 +179,11 @@ Kaixin Bai, **Huajian Zeng**, Lei Zhang, Yiwen Liu, Hongli Xu, Zhaopeng Chen, Ji
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">3DV 2026</div><img src='images/3dv26_gmt.png' alt="sym" width="500" height="300"></div></div>
 <div class='paper-box-text' markdown="1">
 
-**GMT: Goal-Conditioned Multimodal Transformer for 6-DOF Object Trajectory Synthesis in 3D Scenes**
+[**GMT: Goal-Conditioned Multimodal Transformer for 6-DOF Object Trajectory Synthesis in 3D Scenes**](https://arxiv.org/abs/2603.17993)
 
 **Huajian Zeng**, Abhishek Saroha, Daniel Cremers, Xi Wang
 
 [[webpage]](https://huajian-zeng.github.io/projects/gmt)
-[[arxiv]](https://arxiv.org/abs/2603.17993)
 <span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
 <span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
 [[code]](https://github.com/huajian-zeng/gmt)
