@@ -335,8 +335,8 @@ Linh Kästner, Reyk Carstens, **Huajian Zeng**, Jacek Kmiecik, Tuan Anh Le, Teha
 - *2024.10*, Deutschestipendium 2024/2025
 
 # 📚 Academic Services
-- Conference Reviewer: ICRA, IROS
-- Journal Reviewer: T-RO
+- Conference Reviewer: ICRA 2024/2025, IROS 2026, ECCV 2026
+- Journal Reviewer: T-RO, RA-L
 
 # 💻 Internships
 - *2023.07 - 2024.05*, [Agile Robots](https://www.agile-robots.com/en/), Munich.
