@@ -36,7 +36,7 @@ My research interests focus on 3D computer vision and human/hand-object interact
 # 🔥 News
 <div id="news-container">
 <ul>
-<li><em>2026.04</em>: &nbsp;🎉 Our paper on egocentric object motion generation got accepted in <a href="https://cvpr.thecvf.com/Conferences/2026">CVPR 2026</a> in Nashville, USA.</li>
+<li><em>2026.02</em>: &nbsp;🎉 Our paper on egocentric object motion generation got accepted in <a href="https://cvpr.thecvf.com/Conferences/2026">CVPR 2026</a> in Denver, USA.</li>
 <li><em>2026.02</em>: &nbsp;🎉 Our latest work on hand-object interaction generation for dexterous robot manipulation is available on <a href="https://arxiv.org/abs/2602.13444">arXiv</a>.</li>
 <li><em>2026.01</em>: &nbsp;🎉 Our paper on stereo perception of transparent objects got accepted in <a href="https://2026.ieee-icra.org/">ICRA 2026</a> in Vienna, Austria.</li>
 <li><em>2025.11</em>: &nbsp;🎉 Our paper on object trajectory prediction got accepted in <a href="https://3dvconf.github.io/2026/">3DV 2026</a> in Vancouver, Canada.</li>
