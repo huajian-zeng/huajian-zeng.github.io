@@ -36,6 +36,7 @@ My research interests focus on 3D computer vision and human/hand-object interact
 # 🔥 News
 <div id="news-container">
 <ul>
+<li><em>2026.04</em>: &nbsp;🎉 Our paper on egocentric object motion generation got accepted in <a href="https://cvpr.thecvf.com/Conferences/2026">CVPR 2026</a> in Nashville, USA.</li>
 <li><em>2026.02</em>: &nbsp;🎉 Our latest work on hand-object interaction generation for dexterous robot manipulation is available on <a href="https://arxiv.org/abs/2602.13444">arXiv</a>.</li>
 <li><em>2026.01</em>: &nbsp;🎉 Our paper on stereo perception of transparent objects got accepted in <a href="https://2026.ieee-icra.org/">ICRA 2026</a> in Vienna, Austria.</li>
 <li><em>2025.11</em>: &nbsp;🎉 Our paper on object trajectory prediction got accepted in <a href="https://3dvconf.github.io/2026/">3DV 2026</a> in Vancouver, Canada.</li>
@@ -137,6 +138,24 @@ function toggleBibtex(element) {
 # 📝 Publications 
 
 <!-- pub with images -->
+
+<!-- 11 -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2026</div><img src='images/egoflow.png' alt="sym" width="500" height="300"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[**EgoFlow: Gradient-Guided Flow Matching for Egocentric 6DoF Object Motion Generation**](https://arxiv.org/abs/2604.01421)
+
+Abhishek Saroha, **Huajian Zeng**, Xingxing Zuo, Daniel Cremers, Xi Wang
+
+[[webpage]](https://abhi-rf.github.io/egoflow/)
+[[pdf]](https://arxiv.org/pdf/2604.01421)
+<span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
+<span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
+<span class="abstract-content">Understanding and predicting object motion from egocentric video is fundamental to embodied perception and interaction. However, generating physically consistent 6DoF trajectories remains challenging due to occlusions, fast motion, and the lack of explicit physical reasoning in existing generative models. We present EgoFlow, a flow-matching framework that synthesizes realistic and physically plausible trajectories conditioned on multimodal egocentric observations. EgoFlow employs a hybrid Mamba-Transformer-Perceiver architecture to jointly model temporal dynamics, scene geometry, and semantic intent, while a gradient-guided inference process enforces differentiable physical constraints such as collision avoidance and motion smoothness. This combination yields coherent and controllable motion generation without post-hoc filtering or additional supervision. Experiments on real-world datasets HD-EPIC, EgoExo4D, and HOT3D show that EgoFlow outperforms diffusion-based and transformer baselines in accuracy, generalization, and physical realism, reducing collision rates by up to 79%, and strong generalization to unseen scenes. Our results highlight the promise of flow-based generative modeling for scalable and physically grounded egocentric motion understanding.</span>
+<span class="bibtex-content">@inproceedings{saroha2026egoflow,<br>  title={EgoFlow: Gradient-Guided Flow Matching for Egocentric 6DoF Object Motion Generation},<br>  author={Saroha, Abhishek and Zeng, Huajian and Zuo, Xingxing and Cremers, Daniel and Wang, Xi},<br>  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},<br>  year={2026}<br>}</span>
+
+</div>
+</div>
 
 <!-- 10 -->
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='images/flowhoi.gif' alt="sym" width="500" height="300"></div></div>
