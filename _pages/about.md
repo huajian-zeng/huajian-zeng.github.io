@@ -105,6 +105,9 @@ My research interests focus on 3D computer vision and human/hand-object interact
 .paper-box-text a:hover {
   text-decoration: underline;
 }
+.paper-box-text strong {
+  color: #224b8d;
+}
 </style>
 
 <script>
