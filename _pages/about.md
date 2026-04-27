@@ -358,7 +358,7 @@ Linh Kästner, Reyk Carstens, **Huajian Zeng**, Jacek Kmiecik, Tuan Anh Le, Teha
 
 # 📚 Academic Services
 - Conference Reviewer: ICRA 2024/2025, IROS 2026, ECCV 2026
-- Journal Reviewer: T-RO, RA-L
+- Journal Reviewer: IEEE T-RO, IEEE RA-L, ACM TOG
 
 # 💻 Internships
 - *2023.07 - 2024.05*, [Agile Robots](https://www.agile-robots.com/en/), Munich.
