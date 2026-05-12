@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="StableHand: Quality-Aware Flow Matching for World-Space Dual-Hand Motion Estimation from Egocentric Video">
+  <meta name="keywords" content="Egocentric Hand Motion, Flow Matching, Dual-Hand, World-Space, Hand Pose Estimation, Diffusion Transformer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StableHand: Quality-Aware Flow Matching for World-Space Dual-Hand Motion Estimation from Egocentric Video</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://huajian-zeng.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://huajian-zeng.github.io/projects/flowhoi/">
+            FlowHOI
+          </a>
+          <a class="navbar-item" href="https://huajian-zeng.github.io/projects/gmt/">
+            GMT
+          </a>
+          <a class="navbar-item" href="https://huajian-zeng.github.io/projects/coe/">
+            CoE
+          </a>
+          <a class="navbar-item" href="https://sites.google.com/view/cleardepth/">
+            ClearDepth
+          </a>
+          <a class="navbar-item" href="https://github.com/Arena-Rosnav">
+            Arena Series
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">StableHand: Quality-Aware Flow Matching for World-Space Dual-Hand Motion Estimation from Egocentric Video</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://huajian-zeng.github.io/">Huajian Zeng</a><sup>1</sup>,</span>
+            <span class="author-block">
+              Chaohua Yao<sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=Lh2CthAAAAAJ&hl">Yuantai Zhang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=f7ox7CIAAAAJ">Jiaqi Yang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://rolpotamias.github.io/">Rolandos Alexandros Potamias</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="https://xingxingzuo.github.io/">Xingxing Zuo</a><sup>1,&dagger;</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Mohamed bin Zayed University of Artificial Intelligence (MBZUAI),&nbsp;&nbsp;</span>
+            <span class="author-block"><sup>2</sup>University of Illinois at Urbana-Champaign (UIUC),&nbsp;&nbsp;</span>
+            <span class="author-block"><sup>3</sup>Imperial College London</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>&dagger;</sup>Corresponding author</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./main.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/S_WcB9fpmJ8"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/huajian-zeng/stablehand"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="publication-video">
+        <iframe src="https://www.youtube.com/embed/S_WcB9fpmJ8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; aspect-ratio: 16 / 9;"></iframe>
+      </div>
+      <img src="./static/images/teaser.png" alt="StableHand teaser" style="margin-top: 1.5rem;">
+      <h2 class="subtitle has-text-centered">
+        StableHand recovers world-space dual-hand motion from egocentric video, anchoring reliable hand observations and regenerating unreliable ones from a learned bimanual motion prior.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recovering world-space 4D motion of two interacting hands from egocentric video is a fundamental capability for supervising
+            robot policy learning, where wrist trajectories track the end-effector and finger articulations specify the grasp pose.
+            Two major challenges arise in this setting: hands frequently leave the camera view for extended periods due to head motion,
+            and persistent hand&ndash;object interactions cause severe occlusions of one or both hands. Existing methods uniformly condition
+            on noisy hand motion observations without accounting for their per-frame reliability, leading to substantial performance degradation.
+          </p>
+          <p>
+            Our key insight is that accurate world-space hand motion estimation is tightly coupled with the quality of per-frame hand observations.
+            To this end, we decompose the quality of hand observations extracted from an off-the-shelf hand pose estimator into four channels:
+            wrist global translation and finger articulations for both hands. We propose <b>StableHand</b>, a quality-aware flow-matching framework
+            conditioned on these four-channel quality signals, which are predicted by a learned quality network. We naturally incorporate the
+            quality signals into the flow-matching process through a per-channel forward schedule, a quality-adjusted velocity target, AdaLN
+            modulation of the DiT denoiser, and a quality-aware ODE initialization. This unified generative process preserves high-quality
+            observations while reconstructing unreliable ones using a learned bimanual motion prior.
+          </p>
+          <p>
+            Experiments on HOT3D and ARCTIC, two egocentric benchmarks featuring long missing-hand spans and persistent hand&ndash;object occlusions,
+            show that StableHand achieves state-of-the-art performance across all reported metrics, reducing W-MPJPE by 20&ndash;25% compared to
+            the strongest baseline, with the largest gains on heavily occluded ARCTIC sequences.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Pipeline Overview. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Pipeline Overview</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/pipeline.png" alt="StableHand pipeline">
+          <p>
+            From an egocentric video, frozen off-the-shelf modules produce per-hand MANO observations together with camera and scene context. StableHand consists of two learned modules:
+          </p>
+          <ul>
+            <li><b>Quality Network</b> &mdash; Predicts a per-component error (wrist and fingers of each hand), then converts it to a four-channel quality signal via an adaptively calibrated RBF bandwidth.</li>
+            <li><b>Quality-Aware Flow-Matching DiT</b> &mdash; The quality signal drives a per-channel noise schedule, a quality-adjusted velocity target, AdaLN modulation of a four-token-per-frame DiT, and a quality-aware ODE initialization. High-quality channels are anchored on the observation while low-quality ones are regenerated from the learned bimanual motion prior.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--/ Pipeline Overview. -->
+
+    <!-- Qualitative Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative Results</h2>
+        <div class="content has-text-justified">
+          <h3 class="title is-4">HOT3D: Long Missing-Hand Spans</h3>
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/hot3d_4view_2.mp4" type="video/mp4">
+          </video>
+          <p style="text-align: center; font-style: italic; color: #555;">
+            World-space dual-hand trajectories on HOT3D.
+          </p>
+
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/hot3d_4view_3.mp4" type="video/mp4">
+          </video>
+          <p style="text-align: center; font-style: italic; color: #555;">
+            StableHand re-anchors when observations resume, while the camera-view WiLoR baseline drifts across long missing-hand spans.
+          </p>
+
+          <h3 class="title is-4">ARCTIC: Persistent Hand&ndash;Object Occlusion</h3>
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/arctic_4view_2.mp4" type="video/mp4">
+          </video>
+          <p style="text-align: center; font-style: italic; color: #555;">
+            World-space dual-hand trajectories on ARCTIC.
+          </p>
+
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/arctic_4view_3.mp4" type="video/mp4">
+          </video>
+          <p style="text-align: center; font-style: italic; color: #555;">
+            Under persistent bimanual occlusion, StableHand preserves both hands' trajectories while baselines collapse the occluded hand to a generic prior.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Qualitative Results. -->
+
+    <!-- More Qualitative Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">More Qualitative Results</h2>
+        <div class="content has-text-justified">
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/hot3d_2view_1.mp4" type="video/mp4">
+          </video>
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/hot3d_2view_2.mp4" type="video/mp4">
+          </video>
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/arctic_2view_1.mp4" type="video/mp4">
+          </video>
+          <video autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/arctic_2view_2.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <!--/ More Qualitative Results. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{zeng2026stablehand,
+      title = {StableHand: Quality-Aware Flow Matching for World-Space Dual-Hand Motion Estimation from Egocentric Video},
+      author = {Zeng, Huajian and Yao, Chaohua and Zhang, Yuantai and Yang, Jiaqi and Potamias, Rolandos Alexandros and Zuo, Xingxing},
+      year = {2026},
+    }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
