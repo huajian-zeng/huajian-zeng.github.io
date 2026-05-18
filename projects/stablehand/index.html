@@ -167,15 +167,15 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recovering world-space 4D motion of two interacting hands from egocentric video is a fundamental capability for supervising
+            Recovering world space 4D motion of two interacting hands from egocentric video is a fundamental capability for supervising
             robot policy learning, where wrist trajectories track the end-effector and finger articulations specify the grasp pose.
             Two major challenges arise in this setting: hands frequently leave the camera view for extended periods due to head motion,
-            and persistent hand&ndash;object interactions cause severe occlusions of one or both hands. Existing methods uniformly condition
+            and persistent hand-object interactions cause severe occlusions of one or both hands. Existing methods uniformly condition
             on noisy hand motion observations without accounting for their per-frame reliability, leading to substantial performance degradation.
           </p>
           <p>
-            Our key insight is that accurate world-space hand motion estimation is tightly coupled with the quality of per-frame hand observations.
-            To this end, we decompose the quality of hand observations extracted from an off-the-shelf hand pose estimator into four channels:
+            Our key insight is that accurate world space hand motion estimation is tightly coupled with the quality of per-frame hand observations.
+            To this end, we decompose the quality of hand motion observations extracted from an off-the-shelf hand pose estimator into four channels:
             wrist global translation and finger articulations for both hands. We propose <b>StableHand</b>, a quality-aware flow-matching framework
             conditioned on these four-channel quality signals, which are predicted by a learned quality network. We naturally incorporate the
             quality signals into the flow-matching process through a per-channel forward schedule, a quality-adjusted velocity target, AdaLN
@@ -183,7 +183,7 @@
             observations while reconstructing unreliable ones using a learned bimanual motion prior.
           </p>
           <p>
-            Experiments on HOT3D and ARCTIC, two egocentric benchmarks featuring long missing-hand spans and persistent hand&ndash;object occlusions,
+            Experiments on HOT3D and ARCTIC, two egocentric benchmarks featuring long missing-hand spans and persistent hand-object occlusions,
             show that StableHand achieves state-of-the-art performance across all reported metrics, reducing W-MPJPE by 20&ndash;25% compared to
             the strongest baseline, with the largest gains on heavily occluded ARCTIC sequences.
           </p>
