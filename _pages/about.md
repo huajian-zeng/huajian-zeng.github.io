@@ -37,6 +37,7 @@ My research interests focus on 3D computer vision and human/hand-object interact
 <div id="news-container">
 <ul>
 <li><em>2026.05</em>: &nbsp;🎉 Our latest work on quality-aware hand motion estimation from egocentric video is available on <a href="https://arxiv.org/abs/2605.18553">arXiv</a>.</li>
+<li><em>2026.04</em>: &nbsp;🎉 Our paper on feature-free initialization for monocular visual-inertial systems got accepted in <a href="https://roboticsconference.org/2026/">RSS 2026</a> in Sydney, Australia.</li>
 <li><em>2026.02</em>: &nbsp;🎉 Our paper on egocentric object motion generation got accepted in <a href="https://cvpr.thecvf.com/Conferences/2026">CVPR 2026</a> in Denver, USA.</li>
 <li><em>2026.02</em>: &nbsp;🎉 Our latest work on hand-object interaction generation for dexterous robot manipulation is available on <a href="https://arxiv.org/abs/2602.13444">arXiv</a>.</li>
 <li><em>2026.01</em>: &nbsp;🎉 Our paper on stereo perception of transparent objects got accepted in <a href="https://2026.ieee-icra.org/">ICRA 2026</a> in Vienna, Austria.</li>
@@ -159,6 +160,24 @@ function toggleBibtex(element) {
 [[video]](https://youtu.be/2UmaYTKQOAM)
 <span class="abstract-content">Recovering world space 4D motion of two interacting hands from egocentric video is a fundamental capability for supervising robot policy learning, where wrist trajectories track the end-effector and finger articulations specify the grasp pose. Two major challenges arise in this setting: hands frequently leave the camera view for extended periods due to head motion, and persistent hand-object interactions cause severe occlusions of one or both hands. Existing methods uniformly condition on noisy hand motion observations without accounting for their per-frame reliability, leading to substantial performance degradation. Our key insight is that accurate world space hand motion estimation is tightly coupled with the quality of per-frame hand observations. To this end, we decompose the quality of hand motion observations extracted from an off-the-shelf hand pose estimator into four channels: wrist global translation and finger articulations for both hands. We propose StableHand, a quality-aware flow-matching framework conditioned on these four-channel quality signals, which are predicted by a learned quality network. We naturally incorporate the quality signals into the flow-matching process through a per-channel forward schedule, a quality-adjusted velocity target, AdaLN modulation of the DiT denoiser, and a quality-aware ODE initialization. This unified generative process preserves high-quality observations while reconstructing unreliable ones using a learned bimanual motion prior. Experiments on HOT3D and ARCTIC, two egocentric benchmarks featuring long missing-hand spans and persistent hand-object occlusions, show that StableHand achieves state-of-the-art performance across all reported metrics, reducing W-MPJPE by 20–25% compared to the strongest baseline, with the largest gains on heavily occluded ARCTIC sequences.</span>
 <span class="bibtex-content">@article{zeng2026stablehand,<br>  title={StableHand: Quality-Aware Flow Matching for World-Space Dual-Hand Motion Estimation from Egocentric Video},<br>  author={Zeng, Huajian and Yao, Chaohua and Zhang, Yuantai and Yang, Jiaqi and Potamias, Rolandos Alexandros and Zuo, Xingxing},<br>  journal={arXiv preprint arXiv:2605.18553},<br>  year={2026}<br>}</span>
+
+</div>
+</div>
+
+<!-- 13 -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">RSS 2026</div><img src='images/rss26_vins.gif' alt="sym" width="500" height="300"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[**Efficient Feature-Free Initialization for Monocular Visual-Inertial Systems Using a Feed-Forward 3D Model**](https://arxiv.org/abs/2605.17327)
+
+Yuantai Zhang, Jiaqi Yang, **Huajian Zeng**, Changhao Chen, Haoang Li, Liang Li, Dezhen Song, Xingxing Zuo
+
+[[pdf]](https://arxiv.org/pdf/2605.17327)
+<span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
+<span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
+[[code]](https://github.com/Yuantai-Z/FF-VIO-Init)
+<span class="abstract-content">Fast and reliable initialization is critical for monocular visual-inertial navigation systems (VINS), as it establishes the starting conditions for subsequent state estimation. Despite steady progress, most existing methods heavily rely on visual feature correspondences and require 3-4 seconds of sensory data for successful initialization, which limits their applicability and efficiency. With the advent of feed-forward 3D models that can directly predict point clouds from images, we revisit the visual-inertial initialization problem from a concise perspective. In this work, we propose a feature-free initialization framework that leverages up-to-scale point clouds predicted by a feed-forward 3D model, thereby obviating the need for visual feature tracking and estimation. This design substantially reduces system complexity and improves the reliability of initialization. Experiments on public datasets demonstrate that the proposed feature-free initialization method achieves the highest success rate, exceeding 90%, and significantly reduces the data duration required for successful initialization, typically to under 1.2 s. We further validate our method on a self-collected dataset covering various indoor and outdoor scenarios, demonstrating robust performance, particularly in visually degraded environments where existing methods often fail.</span>
+<span class="bibtex-content">@inproceedings{zhang2026efficient,<br>  title={Efficient Feature-Free Initialization for Monocular Visual-Inertial Systems Using a Feed-Forward 3D Model},<br>  author={Zhang, Yuantai and Yang, Jiaqi and Zeng, Huajian and Chen, Changhao and Li, Haoang and Li, Liang and Song, Dezhen and Zuo, Xingxing},<br>  booktitle={Robotics: Science and Systems (RSS)},<br>  year={2026}<br>}</span>
 
 </div>
 </div>
