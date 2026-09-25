@@ -36,6 +36,7 @@ My research interests focus on 3D computer vision and human/hand-object interact
 # 🔥 News
 <div id="news-container">
 <ul>
+<li><em>2026.09</em>: &nbsp;🎉 Our papers <a href="https://huajian-zeng.github.io/projects/flowhoi">FlowHOI</a> and <a href="https://huajian-zeng.github.io/projects/stablehand">StableHand</a> got accepted in <a href="https://neurips.cc/Conferences/2026">NeurIPS 2026</a> in Sydney, Australia.</li>
 <li><em>2026.05</em>: &nbsp;🎉 Our latest work on quality-aware hand motion estimation from egocentric video is available on <a href="https://arxiv.org/abs/2605.18553">arXiv</a>.</li>
 <li><em>2026.04</em>: &nbsp;🎉 Our paper on feature-free initialization for monocular visual-inertial systems got accepted in <a href="https://roboticsconference.org/2026/">RSS 2026</a> in Sydney, Australia.</li>
 <li><em>2026.02</em>: &nbsp;🎉 Our paper on egocentric object motion generation got accepted in <a href="https://cvpr.thecvf.com/Conferences/2026">CVPR 2026</a> in Denver, USA.</li>
@@ -110,6 +111,21 @@ My research interests focus on 3D computer vision and human/hand-object interact
 .paper-box-text strong {
   color: #224b8d;
 }
+.paper-box-text a i, .abstract-toggle i, .bibtex-toggle i {
+  margin-right: 4px;
+}
+.paper-box-text .pub-venue a {
+  color: #c0392b;
+}
+.paper-box-text a.github-stars:hover {
+  text-decoration: none;
+}
+.github-stars img {
+  display: inline-block;
+  height: 18px;
+  width: auto;
+  vertical-align: -3px;
+}
 </style>
 
 <script>
@@ -143,24 +159,46 @@ function toggleBibtex(element) {
 # 📝 Publications 
 
 <!-- pub with images -->
-<!-- Resource order: webpage, pdf, abstract, bibtex, code, video. Omit unavailable resources; link official repositories as code even when the source release is pending. -->
+<!-- Resource order: webpage, pdf, abstract, bibtex, code, video. Each resource is an icon + label, separated by " / "; code is followed by a GitHub stars badge. Omit unavailable resources; link official repositories as code even when the source release is pending. -->
 
 <!-- 12 -->
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='images/stablehand.gif' alt="sym" width="500" height="300"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2026</div><img src='images/stablehand.gif' alt="sym" width="500" height="300"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [**StableHand: Quality-Aware Flow Matching for World-Space Dual-Hand Motion Estimation from Egocentric Video**](https://arxiv.org/abs/2605.18553)
 
-**Huajian Zeng**, Chaohua Yao, Yuantai Zhang, Jiaqi Yang, Rolandos Alexandros Potamias, Xingxing Zuo
+**Huajian Zeng**, Chaohua Yao, Yuantai Zhang, Jiaqi Yang, Rolandos Alexandros Potamias, Xingxing Zuo<br>
+<span class="pub-venue"><a href="https://neurips.cc/Conferences/2026">Conference on Neural Information Processing Systems (<b>NeurIPS 2026</b>)</a></span>
 
-[[webpage]](https://huajian-zeng.github.io/projects/stablehand)
-[[pdf]](https://arxiv.org/pdf/2605.18553)
-<span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
-<span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
-[[code]](https://github.com/huajian-zeng/stablehand)
-[[video]](https://youtu.be/2UmaYTKQOAM)
+<a href="https://huajian-zeng.github.io/projects/stablehand"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://arxiv.org/pdf/2605.18553"><i class="fas fa-file-pdf"></i>PDF</a> /
+<span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
+<span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
+<a href="https://github.com/huajian-zeng/stablehand"><i class="fab fa-github"></i>Code</a> <a class="github-stars" href="https://github.com/huajian-zeng/stablehand/stargazers"><img src="https://img.shields.io/github/stars/huajian-zeng/stablehand?style=social" alt="GitHub stars"></a> /
+<a href="https://youtu.be/2UmaYTKQOAM"><i class="fab fa-youtube"></i>Video</a>
 <span class="abstract-content">Recovering world space 4D motion of two interacting hands from egocentric video is a fundamental capability for supervising robot policy learning, where wrist trajectories track the end-effector and finger articulations specify the grasp pose. Two major challenges arise in this setting: hands frequently leave the camera view for extended periods due to head motion, and persistent hand-object interactions cause severe occlusions of one or both hands. Existing methods uniformly condition on noisy hand motion observations without accounting for their per-frame reliability, leading to substantial performance degradation. Our key insight is that accurate world space hand motion estimation is tightly coupled with the quality of per-frame hand observations. To this end, we decompose the quality of hand motion observations extracted from an off-the-shelf hand pose estimator into four channels: wrist global translation and finger articulations for both hands. We propose StableHand, a quality-aware flow-matching framework conditioned on these four-channel quality signals, which are predicted by a learned quality network. We naturally incorporate the quality signals into the flow-matching process through a per-channel forward schedule, a quality-adjusted velocity target, AdaLN modulation of the DiT denoiser, and a quality-aware ODE initialization. This unified generative process preserves high-quality observations while reconstructing unreliable ones using a learned bimanual motion prior. Experiments on HOT3D and ARCTIC, two egocentric benchmarks featuring long missing-hand spans and persistent hand-object occlusions, show that StableHand achieves state-of-the-art performance across all reported metrics, reducing W-MPJPE by 20–25% compared to the strongest baseline, with the largest gains on heavily occluded ARCTIC sequences.</span>
-<span class="bibtex-content">@article{zeng2026stablehand,<br>  title={StableHand: Quality-Aware Flow Matching for World-Space Dual-Hand Motion Estimation from Egocentric Video},<br>  author={Zeng, Huajian and Yao, Chaohua and Zhang, Yuantai and Yang, Jiaqi and Potamias, Rolandos Alexandros and Zuo, Xingxing},<br>  journal={arXiv preprint arXiv:2605.18553},<br>  year={2026}<br>}</span>
+<span class="bibtex-content">@inproceedings{zeng2026stablehand,<br>  title={StableHand: Quality-Aware Flow Matching for World-Space Dual-Hand Motion Estimation from Egocentric Video},<br>  author={Zeng, Huajian and Yao, Chaohua and Zhang, Yuantai and Yang, Jiaqi and Potamias, Rolandos Alexandros and Zuo, Xingxing},<br>  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},<br>  year={2026}<br>}</span>
+
+</div>
+</div>
+
+<!-- 10 -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2026</div><img src='images/flowhoi.gif' alt="sym" width="500" height="300"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[**FlowHOI: Flow-based Semantics-Grounded Generation of Hand-Object Interactions for Dexterous Robot Manipulation**](https://arxiv.org/abs/2602.13444)
+
+**Huajian Zeng**, Lingyun Chen, Jiaqi Yang, Yuantai Zhang, Fan Shi, Peidong Liu, Xingxing Zuo<br>
+<span class="pub-venue"><a href="https://neurips.cc/Conferences/2026">Conference on Neural Information Processing Systems (<b>NeurIPS 2026</b>)</a></span>
+
+<a href="https://huajian-zeng.github.io/projects/flowhoi"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://arxiv.org/pdf/2602.13444"><i class="fas fa-file-pdf"></i>PDF</a> /
+<span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
+<span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
+<a href="https://github.com/huajian-zeng/flowhoi"><i class="fab fa-github"></i>Code</a> <a class="github-stars" href="https://github.com/huajian-zeng/flowhoi/stargazers"><img src="https://img.shields.io/github/stars/huajian-zeng/flowhoi?style=social" alt="GitHub stars"></a> /
+<a href="https://youtu.be/c_ayPvccyi8"><i class="fab fa-youtube"></i>Video</a>
+<span class="abstract-content">Recent vision-language-action (VLA) models can generate plausible end-effector motions, yet they often fail in long-horizon, contact-rich tasks because the underlying hand-object interaction (HOI) structure is not explicitly represented. We propose FlowHOI, a two-stage flow-matching framework that generates semantically grounded, temporally coherent HOI sequences, comprising hand poses, object poses, and hand-object contact states, conditioned on an egocentric observation, a language instruction, and a 3D Gaussian splatting (3DGS) scene reconstruction. We decouple geometry-centric grasping from semantics-centric manipulation, conditioning the latter on compact 3D scene tokens and a motion–text alignment loss to semantically ground the generated interactions in both the physical scene layout and the language instruction. To address the scarcity of high-fidelity HOI supervision, we introduce a reconstruction pipeline that recovers aligned hand-object trajectories and meshes from large-scale egocentric videos, yielding an HOI prior for robust generation. Across the GRAB and HOT3D benchmarks, FlowHOI achieves the highest action recognition accuracy and a 1.7× higher physics simulation success rate than the strongest diffusion-based baseline, while delivering a 40× inference speedup. We further demonstrate real-robot execution on four dexterous manipulation tasks, illustrating the feasibility of retargeting generated HOI representations to real-robot execution pipelines.</span>
+<span class="bibtex-content">@inproceedings{zeng2026flowhoi,<br>  title={FlowHOI: Flow-based Semantics-Grounded Generation of Hand-Object Interactions for Dexterous Robot Manipulation},<br>  author={Zeng, Huajian and Chen, Lingyun and Yang, Jiaqi and Zhang, Yuantai and Shi, Fan and Liu, Peidong and Zuo, Xingxing},<br>  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},<br>  year={2026}<br>}</span>
 
 </div>
 </div>
@@ -171,13 +209,14 @@ function toggleBibtex(element) {
 
 [**Efficient Feature-Free Initialization for Monocular Visual-Inertial Systems Using a Feed-Forward 3D Model**](https://arxiv.org/abs/2605.17327)
 
-Yuantai Zhang, Jiaqi Yang, **Huajian Zeng**, Changhao Chen, Haoang Li, Liang Li, Dezhen Song, Xingxing Zuo
+Yuantai Zhang, Jiaqi Yang, **Huajian Zeng**, Changhao Chen, Haoang Li, Liang Li, Dezhen Song, Xingxing Zuo<br>
+<span class="pub-venue"><a href="https://roboticsconference.org/2026/">Robotics: Science and Systems (<b>RSS 2026</b>)</a></span>
 
-[[pdf]](https://arxiv.org/pdf/2605.17327)
-<span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
-<span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
-[[code]](https://github.com/Yuantai-Z/FF-VIO-Init)
-[[video]](https://www.youtube.com/watch?v=uxTh21D8log)
+<a href="https://arxiv.org/pdf/2605.17327"><i class="fas fa-file-pdf"></i>PDF</a> /
+<span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
+<span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
+<a href="https://github.com/Yuantai-Z/FF-VIO-Init"><i class="fab fa-github"></i>Code</a> <a class="github-stars" href="https://github.com/Yuantai-Z/FF-VIO-Init/stargazers"><img src="https://img.shields.io/github/stars/Yuantai-Z/FF-VIO-Init?style=social" alt="GitHub stars"></a> /
+<a href="https://www.youtube.com/watch?v=uxTh21D8log"><i class="fab fa-youtube"></i>Video</a>
 <span class="abstract-content">Fast and reliable initialization is critical for monocular visual-inertial navigation systems (VINS), as it establishes the starting conditions for subsequent state estimation. Despite steady progress, most existing methods heavily rely on visual feature correspondences and require 3-4 seconds of sensory data for successful initialization, which limits their applicability and efficiency. With the advent of feed-forward 3D models that can directly predict point clouds from images, we revisit the visual-inertial initialization problem from a concise perspective. In this work, we propose a feature-free initialization framework that leverages up-to-scale point clouds predicted by a feed-forward 3D model, thereby obviating the need for visual feature tracking and estimation. This design substantially reduces system complexity and improves the reliability of initialization. Experiments on public datasets demonstrate that the proposed feature-free initialization method achieves the highest success rate, exceeding 90%, and significantly reduces the data duration required for successful initialization, typically to under 1.2 s. We further validate our method on a self-collected dataset covering various indoor and outdoor scenarios, demonstrating robust performance, particularly in visually degraded environments where existing methods often fail.</span>
 <span class="bibtex-content">@inproceedings{zhang2026efficient,<br>  title={Efficient Feature-Free Initialization for Monocular Visual-Inertial Systems Using a Feed-Forward 3D Model},<br>  author={Zhang, Yuantai and Yang, Jiaqi and Zeng, Huajian and Chen, Changhao and Li, Haoang and Li, Liang and Song, Dezhen and Zuo, Xingxing},<br>  booktitle={Robotics: Science and Systems (RSS)},<br>  year={2026}<br>}</span>
 
@@ -190,35 +229,16 @@ Yuantai Zhang, Jiaqi Yang, **Huajian Zeng**, Changhao Chen, Haoang Li, Liang Li,
 
 [**EgoFlow: Gradient-Guided Flow Matching for Egocentric 6DoF Object Motion Generation**](https://arxiv.org/abs/2604.01421)
 
-Abhishek Saroha, **Huajian Zeng**, Xingxing Zuo, Daniel Cremers, Xi Wang
+Abhishek Saroha, **Huajian Zeng**, Xingxing Zuo, Daniel Cremers, Xi Wang<br>
+<span class="pub-venue"><a href="https://cvpr.thecvf.com/Conferences/2026">IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR 2026</b>)</a></span>
 
-[[webpage]](https://abhi-rf.github.io/egoflow/)
-[[pdf]](https://arxiv.org/pdf/2604.01421)
-<span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
-<span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
-[[code]](https://github.com/abhi-rf/egoflow)
+<a href="https://abhi-rf.github.io/egoflow/"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://arxiv.org/pdf/2604.01421"><i class="fas fa-file-pdf"></i>PDF</a> /
+<span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
+<span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
+<a href="https://github.com/abhi-rf/egoflow"><i class="fab fa-github"></i>Code</a> <a class="github-stars" href="https://github.com/abhi-rf/egoflow/stargazers"><img src="https://img.shields.io/github/stars/abhi-rf/egoflow?style=social" alt="GitHub stars"></a>
 <span class="abstract-content">Understanding and predicting object motion from egocentric video is fundamental to embodied perception and interaction. However, generating physically consistent 6DoF trajectories remains challenging due to occlusions, fast motion, and the lack of explicit physical reasoning in existing generative models. We present EgoFlow, a flow-matching framework that synthesizes realistic and physically plausible trajectories conditioned on multimodal egocentric observations. EgoFlow employs a hybrid Mamba-Transformer-Perceiver architecture to jointly model temporal dynamics, scene geometry, and semantic intent, while a gradient-guided inference process enforces differentiable physical constraints such as collision avoidance and motion smoothness. This combination yields coherent and controllable motion generation without post-hoc filtering or additional supervision. Experiments on real-world datasets HD-EPIC, EgoExo4D, and HOT3D show that EgoFlow outperforms diffusion-based and transformer baselines in accuracy, generalization, and physical realism, reducing collision rates by up to 79%, and strong generalization to unseen scenes. Our results highlight the promise of flow-based generative modeling for scalable and physically grounded egocentric motion understanding.</span>
 <span class="bibtex-content">@inproceedings{saroha2026egoflow,<br>  title={EgoFlow: Gradient-Guided Flow Matching for Egocentric 6DoF Object Motion Generation},<br>  author={Saroha, Abhishek and Zeng, Huajian and Zuo, Xingxing and Cremers, Daniel and Wang, Xi},<br>  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},<br>  year={2026}<br>}</span>
-
-</div>
-</div>
-
-<!-- 10 -->
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='images/flowhoi.gif' alt="sym" width="500" height="300"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[**FlowHOI: Flow-based Semantics-Grounded Generation of Hand-Object Interactions for Dexterous Robot Manipulation**](https://arxiv.org/abs/2602.13444)
-
-**Huajian Zeng**, Lingyun Chen, Jiaqi Yang, Yuantai Zhang, Fan Shi, Peidong Liu, Xingxing Zuo
-
-[[webpage]](https://huajian-zeng.github.io/projects/flowhoi)
-[[pdf]](https://arxiv.org/pdf/2602.13444)
-<span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
-<span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
-[[code]](https://github.com/huajian-zeng/flowhoi)
-[[video]](https://youtu.be/c_ayPvccyi8)
-<span class="abstract-content">Recent vision-language-action (VLA) models can generate plausible end-effector motions, yet they often fail in long-horizon, contact-rich tasks because the underlying hand-object interaction (HOI) structure is not explicitly represented. We propose FlowHOI, a two-stage flow-matching framework that generates semantically grounded, temporally coherent HOI sequences, comprising hand poses, object poses, and hand-object contact states, conditioned on an egocentric observation, a language instruction, and a 3D Gaussian splatting (3DGS) scene reconstruction. We decouple geometry-centric grasping from semantics-centric manipulation, conditioning the latter on compact 3D scene tokens and a motion–text alignment loss to semantically ground the generated interactions in both the physical scene layout and the language instruction. To address the scarcity of high-fidelity HOI supervision, we introduce a reconstruction pipeline that recovers aligned hand-object trajectories and meshes from large-scale egocentric videos, yielding an HOI prior for robust generation. Across the GRAB and HOT3D benchmarks, FlowHOI achieves the highest action recognition accuracy and a 1.7× higher physics simulation success rate than the strongest diffusion-based baseline, while delivering a 40× inference speedup. We further demonstrate real-robot execution on four dexterous manipulation tasks, illustrating the feasibility of retargeting generated HOI representations to real-robot execution pipelines.</span>
-<span class="bibtex-content">@article{zeng2026flowhoi,<br>  title={FlowHOI: Flow-based Semantics-Grounded Generation of Hand-Object Interactions for Dexterous Robot Manipulation},<br>  author={Zeng, Huajian and Chen, Lingyun and Yang, Jiaqi and Zhang, Yuantai and Shi, Fan and Liu, Peidong and Zuo, Xingxing},<br>  journal={arXiv preprint arXiv:2602.13444},<br>  year={2026}<br>}</span>
 
 </div>
 </div>
@@ -229,13 +249,14 @@ Abhishek Saroha, **Huajian Zeng**, Xingxing Zuo, Daniel Cremers, Xi Wang
 
 [**ClearDepth: Enhanced Stereo Perception of Transparent Objects for Robotic Manipulation**](https://arxiv.org/abs/2409.08926)
 
-Kaixin Bai, **Huajian Zeng**, Lei Zhang, Yiwen Liu, Hongli Xu, Zhaopeng Chen, Jianwei Zhang
+Kaixin Bai, **Huajian Zeng**, Lei Zhang, Yiwen Liu, Hongli Xu, Zhaopeng Chen, Jianwei Zhang<br>
+<span class="pub-venue"><a href="https://2026.ieee-icra.org/">IEEE International Conference on Robotics and Automation (<b>ICRA 2026</b>)</a></span>
 
-[[webpage]](https://sites.google.com/view/cleardepth/)
-[[pdf]](https://arxiv.org/pdf/2409.08926)
-<span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
-<span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
-[[video]](https://www.youtube.com/watch?v=6s5LFnUX7h0)
+<a href="https://sites.google.com/view/cleardepth/"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://arxiv.org/pdf/2409.08926"><i class="fas fa-file-pdf"></i>PDF</a> /
+<span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
+<span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
+<a href="https://www.youtube.com/watch?v=6s5LFnUX7h0"><i class="fab fa-youtube"></i>Video</a>
 <span class="abstract-content">Transparent object depth perception poses a challenge in everyday life and logistics, primarily due to the inability of standard 3D sensors to accurately capture depth on transparent or reflective surfaces. This limitation significantly affects depth map and point cloud-reliant applications, especially in robotic manipulation. We developed a vision transformer-based algorithm for stereo depth recovery of transparent objects. This approach is complemented by an innovative feature post-fusion module, which enhances the accuracy of depth recovery by structural features in images. To address the high costs associated with dataset collection for stereo camera-based perception of transparent objects, our method incorporates a parameter-aligned, domain-adaptive, and physically realistic Sim2Real simulation for efficient data generation, accelerated by AI algorithm. Our experimental results demonstrate the model's exceptional Sim2Real generalizability in real-world scenarios, enabling precise depth mapping of transparent objects to assist in robotic manipulation.</span>
 <span class="bibtex-content">@article{bai2024cleardepth,<br>  title={ClearDepth: enhanced stereo perception of transparent objects for robotic manipulation},<br>  author={Bai, Kaixin and Zeng, Huajian and Zhang, Lei and Liu, Yiwen and Xu, Hongli and Chen, Zhaopeng and Zhang, Jianwei},<br>  journal={arXiv preprint arXiv:2409.08926},<br>  year={2024}<br>}</span>
 </div>
@@ -247,14 +268,15 @@ Kaixin Bai, **Huajian Zeng**, Lei Zhang, Yiwen Liu, Hongli Xu, Zhaopeng Chen, Ji
 
 [**GMT: Goal-Conditioned Multimodal Transformer for 6-DOF Object Trajectory Synthesis in 3D Scenes**](https://arxiv.org/abs/2603.17993)
 
-**Huajian Zeng**, Abhishek Saroha, Daniel Cremers, Xi Wang
+**Huajian Zeng**, Abhishek Saroha, Daniel Cremers, Xi Wang<br>
+<span class="pub-venue"><a href="https://3dvconf.github.io/2026/">International Conference on 3D Vision (<b>3DV 2026</b>)</a></span>
 
-[[webpage]](https://huajian-zeng.github.io/projects/gmt)
-[[pdf]](https://arxiv.org/pdf/2603.17993)
-<span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
-<span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
-[[code]](https://github.com/huajian-zeng/gmt)
-[[video]](https://www.youtube.com/watch?v=uYZzJsfn_T4)
+<a href="https://huajian-zeng.github.io/projects/gmt"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://arxiv.org/pdf/2603.17993"><i class="fas fa-file-pdf"></i>PDF</a> /
+<span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
+<span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
+<a href="https://github.com/huajian-zeng/gmt"><i class="fab fa-github"></i>Code</a> <a class="github-stars" href="https://github.com/huajian-zeng/gmt/stargazers"><img src="https://img.shields.io/github/stars/huajian-zeng/gmt?style=social" alt="GitHub stars"></a> /
+<a href="https://www.youtube.com/watch?v=uYZzJsfn_T4"><i class="fab fa-youtube"></i>Video</a>
 <span class="abstract-content">Synthesizing controllable 6-DOF object manipulation trajectories in 3D environments is essential for enabling robots to interact with complex scenes, yet remains challenging due to the need for accurate spatial reasoning, physical feasibility, and multimodal scene understanding. Existing approaches often rely on 2D or partial 3D representations, limiting their ability to capture full scene geometry and constraining trajectory precision. We present GMT, a multimodal transformer framework that generates realistic and goal-directed object trajectories by jointly leveraging 3D bounding box geometry, point cloud context, semantic object categories, and target end poses. The model represents trajectories as continuous 6-DOF pose sequences and employs a tailored conditioning strategy that fuses geometric, semantic, contextual, and goal-oriented information. Extensive experiments on synthetic and real-world benchmarks demonstrate that GMT outperforms state-of-the-art human motion and human-object interaction baselines, such as CHOIS and GIMO, achieving substantial gains in spatial accuracy and orientation control. Our method establishes a new benchmark for learning-based manipulation planning and shows strong generalization to diverse objects and cluttered 3D environments.</span>
 <span class="bibtex-content">@inproceedings{zeng2026gmt,<br>  title={GMT: Goal-Conditioned Multimodal Transformer for 6-DOF Object Trajectory Synthesis in 3D Scenes},<br>  author={Zeng, Huajian and Saroha, Abhishek and Cremers, Daniel and Wang, Xi},<br>  booktitle={International Conference on 3D Vision (3DV)},<br>  year={2026}<br>}</span>
 
@@ -267,13 +289,14 @@ Kaixin Bai, **Huajian Zeng**, Lei Zhang, Yiwen Liu, Hongli Xu, Zhaopeng Chen, Ji
 
 [**Arena-Bench 2.0: A Comprehensive Benchmark of Social Navigation Approaches in Collaborative Environments**](https://ieeexplore.ieee.org/document/11246895)
 
-Volodymyr Shcherbyna\*, Linh Kästner\*, Duc Anh Do, Jiaming Wang, Huu Giang Nguyen, Tim Seeger, Ahmed Martban, Zhengcheng Shen, **Huajian Zeng**, Nhan Trinh, Eva Wiese
+Volodymyr Shcherbyna\*, Linh Kästner\*, Duc Anh Do, Jiaming Wang, Huu Giang Nguyen, Tim Seeger, Ahmed Martban, Zhengcheng Shen, **Huajian Zeng**, Nhan Trinh, Eva Wiese<br>
+<span class="pub-venue"><a href="https://www.iros25.org/">IEEE/RSJ International Conference on Intelligent Robots and Systems (<b>IROS 2025</b>)</a></span>
 
-[[webpage]](https://github.com/Arena-Rosnav)
-[[pdf]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11246895)
-<span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
-<span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
-[[code]](https://github.com/Arena-Rosnav/arena-rosnav)
+<a href="https://github.com/Arena-Rosnav"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11246895"><i class="fas fa-file-pdf"></i>PDF</a> /
+<span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
+<span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
+<a href="https://github.com/Arena-Rosnav/arena-rosnav"><i class="fab fa-github"></i>Code</a> <a class="github-stars" href="https://github.com/Arena-Rosnav/arena-rosnav/stargazers"><img src="https://img.shields.io/github/stars/Arena-Rosnav/arena-rosnav?style=social" alt="GitHub stars"></a>
 <span class="abstract-content">Social navigation has become increasingly important for robots operating in human environments, yet many newly proposed navigation methods remain narrowly tailored or exist only as proof-of-concept prototypes. Building on our previous work with Arena, a social navigation development platform, we now propose, Arena-Bench 2.0 a comprehensive social navigation benchmark of state-of-the-art planners, fully integrated into the Arena framework. To achieve this, we developed a novel plugin structure—implemented on ROS2—to streamline the integration process and ensure straightforward, efficient workflows. As a demonstration, we integrated various learning-based and model-based navigation approaches and constructed a diverse set of social navigation scenarios to rigorously evaluate each planner. Specifically, we introduce a scenario generation node that allows users to construct complex, realistic social contexts through a web-based interface. We subsequently perform an extensive benchmark of all integrated planners, assessing both navigational and social metrics. Our evaluation also considers factors such as sensor input, reaction time, and latency, enabling insights into which planner may be most appropriate under different circumstances. The findings offer valuable guidance for selecting suitable planners for specific scenarios.</span>
 <span class="bibtex-content">@inproceedings{shcherbyna2025arenabench,<br>  author={Shcherbyna, Volodymyr and Kästner, Linh and Do, Duc Anh and Wang, Jiaming and Nguyen, Huu Giang and Seeger, Tim and Martban, Ahmed and Shen, Zhengcheng and Zeng, Huajian and Trinh, Nhan and Wiese, Eva},<br>  booktitle={2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},<br>  title={Arena-Bench 2.0: A Comprehensive Benchmark of Social Navigation Approaches in Collaborative Environments},<br>  year={2025},<br>  pages={9202-9209},<br>  doi={10.1109/IROS60139.2025.11246895}<br>}</span>
 
@@ -286,13 +309,14 @@ Volodymyr Shcherbyna\*, Linh Kästner\*, Duc Anh Do, Jiaming Wang, Huu Giang Ngu
 
 [**Arena 5.0: A Photorealistic ROS2 Simulation Framework for Developing and Benchmarking Social Navigation**](https://www.roboticsproceedings.org/rss21/p092.pdf)
 
-Volodymyr Shcherbyna\*, Linh Kästner\*, Duc Anh Do, Hoang Tung, Huu Giang Nguyen, Maximilian Ho-Kyoung Schreff, Tim Seeger, Eva Wiese, Ahmed Martban, **Huajian Zeng**, An Tran, Nguyen Quoc Hung, Jonas Kreutz, Vu Thanh Lam, Ton Manh Kien, Harold Soh
+Volodymyr Shcherbyna\*, Linh Kästner\*, Duc Anh Do, Hoang Tung, Huu Giang Nguyen, Maximilian Ho-Kyoung Schreff, Tim Seeger, Eva Wiese, Ahmed Martban, **Huajian Zeng**, An Tran, Nguyen Quoc Hung, Jonas Kreutz, Vu Thanh Lam, Ton Manh Kien, Harold Soh<br>
+<span class="pub-venue"><a href="https://roboticsconference.org/2025/">Robotics: Science and Systems (<b>RSS 2025</b>)</a></span>
 
-[[webpage]](https://github.com/Arena-Rosnav)
-[[pdf]](https://www.roboticsproceedings.org/rss21/p092.pdf)
-<span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
-<span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
-[[code]](https://github.com/Arena-Rosnav/arena-rosnav)
+<a href="https://github.com/Arena-Rosnav"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://www.roboticsproceedings.org/rss21/p092.pdf"><i class="fas fa-file-pdf"></i>PDF</a> /
+<span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
+<span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
+<a href="https://github.com/Arena-Rosnav/arena-rosnav"><i class="fab fa-github"></i>Code</a> <a class="github-stars" href="https://github.com/Arena-Rosnav/arena-rosnav/stargazers"><img src="https://img.shields.io/github/stars/Arena-Rosnav/arena-rosnav?style=social" alt="GitHub stars"></a>
 <span class="abstract-content">Building upon the foundations laid by our previous work, this paper introduces Arena 5.0, the fifth iteration of our framework for robotics social navigation development and benchmarking. Arena 5.0 provides three main contributions: 1) The complete integration of NVIDIA Isaac Gym, enabling photorealistic simulations and more efficient training. It seamlessly incorporates Isaac Gym into the Arena platform, allowing the use of existing modules such as randomized environment generation, evaluation tools, ROS2 support, and the integration of planners, robot models, and APIs within Isaac Gym. 2) A comprehensive benchmark of state-of-the-art social navigation strategies, evaluated on a diverse set of generated and customized worlds and scenarios of varying difficulty levels. These benchmarks provide a detailed assessment of navigation planners using a wide range of social navigation metrics. 3) Extensive scenario generation and task planning modules for improved and customizable generation of social navigation scenarios, such as emergency and rescue situations. The platform's performance was evaluated by generating the aforementioned benchmark and through a comprehensive user study, demonstrating significant improvements in usability and efficiency compared to previous versions.</span>
 <span class="bibtex-content">@inproceedings{shcherbyna2025arena5,<br>  title={Arena 5.0: A Photorealistic ROS2 Simulation Framework for Developing and Benchmarking Social Navigation},<br>  author={Shcherbyna, Volodymyr and Kästner, Linh and Do, Duc Anh and Tung, Hoang and Nguyen, Huu Giang and Schreff, Maximilian Ho-Kyoung and Seeger, Tim and Wiese, Eva and Martban, Ahmed and Zeng, Huajian and Tran, An and Hung, Nguyen Quoc and Kreutz, Jonas and Lam, Vu Thanh and Kien, Ton Manh and Soh, Harold},<br>  booktitle={Robotics: Science and Systems (RSS)},<br>  year={2025}<br>}</span>
 
@@ -305,13 +329,14 @@ Volodymyr Shcherbyna\*, Linh Kästner\*, Duc Anh Do, Hoang Tung, Huu Giang Nguye
 
 [**CoE: Deep Coupled Embedding for Non-Rigid Point Cloud Correspondences**](https://arxiv.org/abs/2412.05557)
 
-**Huajian Zeng**, Maolin Gao, Daniel Cremers
+**Huajian Zeng**, Maolin Gao, Daniel Cremers<br>
+<span class="pub-venue"><a href="https://3dvconf.github.io/2025/">International Conference on 3D Vision (<b>3DV 2025</b>)</a></span>
 
-[[webpage]](https://huajian-zeng.github.io/projects/coe)
-[[pdf]](https://arxiv.org/pdf/2412.05557)
-<span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
-<span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
-[[code]](https://github.com/huajian-zeng/coe)
+<a href="https://huajian-zeng.github.io/projects/coe"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://arxiv.org/pdf/2412.05557"><i class="fas fa-file-pdf"></i>PDF</a> /
+<span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
+<span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
+<a href="https://github.com/huajian-zeng/coe"><i class="fab fa-github"></i>Code</a> <a class="github-stars" href="https://github.com/huajian-zeng/coe/stargazers"><img src="https://img.shields.io/github/stars/huajian-zeng/coe?style=social" alt="GitHub stars"></a>
 <span class="abstract-content">The interest in matching non-rigidly deformed shapes represented as raw point clouds is rising due to the proliferation of low-cost 3D sensors. Yet, the task is challenging since point clouds are irregular and there is a lack of intrinsic shape information. We propose to tackle these challenges by learning a new shape representation - a per-point high dimensional embedding, in an embedding space where semantically similar points share similar embeddings. The learned embedding has multiple beneficial properties: it is aware of the underlying shape geometry and is robust to shape deformations and various shape artefacts, such as noise and partiality. Consequently, this embedding can be directly employed to retrieve high-quality dense correspondences through a simple nearest neighbor search in the embedding space. Extensive experiments demonstrate new state-of-the-art results and robustness in numerous challenging non-rigid shape matching benchmarks and show its great potential in other shape analysis tasks, such as segmentation.</span>
 <span class="bibtex-content">@inproceedings{zeng2025coe,<br>  title={CoE: Deep Coupled Embedding for Non-Rigid Point Cloud Correspondences},<br>  author={Zeng, Huajian and Gao, Maolin and Cremers, Daniel},<br>  booktitle={2025 International Conference on 3D Vision (3DV)},<br>  pages={286--295},<br>  year={2025},<br>  organization={IEEE}<br>}</span>
 
@@ -324,13 +349,14 @@ Volodymyr Shcherbyna\*, Linh Kästner\*, Duc Anh Do, Hoang Tung, Huu Giang Nguye
 
 [**Arena 4.0: A Comprehensive ROS2 Development and Benchmarking Platform for Human-centric Navigation Using Generative-Model-based Environment Generation**](https://arxiv.org/abs/2409.12471)
 
-Volodymyr Shcherbyna, Linh Kästner, Diego Diaz, Huu Giang Nguyen, Maximilian Ho-Kyoung Schreff, Tim Seeger, Jonas Kreutz, Ahmed Martban, **Huajian Zeng**, Harold Soh
+Volodymyr Shcherbyna, Linh Kästner, Diego Diaz, Huu Giang Nguyen, Maximilian Ho-Kyoung Schreff, Tim Seeger, Jonas Kreutz, Ahmed Martban, **Huajian Zeng**, Harold Soh<br>
+<span class="pub-venue"><a href="https://2025.ieee-icra.org/">IEEE International Conference on Robotics and Automation (<b>ICRA 2025</b>)</a></span>
 
-[[webpage]](https://github.com/Arena-Rosnav)
-[[pdf]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11127635)
-<span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
-<span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
-[[code]](https://github.com/Arena-Rosnav/arena-rosnav)
+<a href="https://github.com/Arena-Rosnav"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11127635"><i class="fas fa-file-pdf"></i>PDF</a> /
+<span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
+<span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
+<a href="https://github.com/Arena-Rosnav/arena-rosnav"><i class="fab fa-github"></i>Code</a> <a class="github-stars" href="https://github.com/Arena-Rosnav/arena-rosnav/stargazers"><img src="https://img.shields.io/github/stars/Arena-Rosnav/arena-rosnav?style=social" alt="GitHub stars"></a>
 <span class="abstract-content">Building upon the foundations laid by our previous work, this paper introduces Arena 4.0, a significant advancement of Arena 3.0, Arena-Bench, Arena 1.0, and Arena 2.0. Arena 4.0 provides three main novel contributions: 1) a generative-model-based world and scenario generation approach using large language models (LLMs) and diffusion models, to dynamically generate complex, human-centric environments from text prompts or 2D floorplans that can be used for development and benchmarking of social navigation strategies. 2) A comprehensive 3D model database which can be extended with 3D assets and semantically linked and annotated using a variety of metrics for dynamic spawning and arrangements inside 3D worlds. 3) The complete migration towards ROS 2, which ensures operation with state-of-the-art hardware and functionalities for improved navigation, usability, and simplified transfer towards real robots. We evaluated the platforms performance through a comprehensive user study and its world generation capabilities for benchmarking demonstrating significant improvements in usability and efficiency compared to previous versions. Arena 4.0 is openly available at https://github.com/Arena-Rosnav.</span>
 <span class="bibtex-content">@inproceedings{shcherbyna2025arena,<br>  title={Arena 4.0: A comprehensive ros2 development and benchmarking platform for human-centric navigation using generative-model-based environment generation},<br>  author={Shcherbyna, Volodymyr and Kastner, Linh and Diaz, Diego and Nguyen, Huu Giang and Schreff, Maximilian Ho--Kyoung and Seeger, Tim and Kreutz, Jonas and Martban, Ahmed and Shen, Zhengcheng and Zeng, Huajian and others},<br>  booktitle={2025 IEEE International Conference on Robotics and Automation (ICRA)},<br>  pages={9138--9144},<br>  year={2025},<br>  organization={IEEE}<br>}</span>
 
@@ -343,13 +369,14 @@ Volodymyr Shcherbyna, Linh Kästner, Diego Diaz, Huu Giang Nguyen, Maximilian Ho
 
 [**Arena 3.0: Advancing Social Navigation in Collaborative and Highly Dynamic Environments**](https://arxiv.org/abs/2406.00837)
 
-Linh Kästner, Reyk Carstens, **Huajian Zeng**, Jacek Kmiecik, Tuan Anh Le, Teham Bhuiyan, Boris Meinardus, Jens Lambrecht
+Linh Kästner, Reyk Carstens, **Huajian Zeng**, Jacek Kmiecik, Tuan Anh Le, Teham Bhuiyan, Boris Meinardus, Jens Lambrecht<br>
+<span class="pub-venue"><a href="https://roboticsconference.org/2024/">Robotics: Science and Systems (<b>RSS 2024</b>)</a></span>
 
-[[webpage]](https://github.com/Arena-Rosnav)
-[[pdf]](https://roboticsproceedings.org/rss20/p074.pdf)
-<span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
-<span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
-[[code]](https://github.com/Arena-Rosnav/arena-rosnav)
+<a href="https://github.com/Arena-Rosnav"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://roboticsproceedings.org/rss20/p074.pdf"><i class="fas fa-file-pdf"></i>PDF</a> /
+<span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
+<span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
+<a href="https://github.com/Arena-Rosnav/arena-rosnav"><i class="fab fa-github"></i>Code</a> <a class="github-stars" href="https://github.com/Arena-Rosnav/arena-rosnav/stargazers"><img src="https://img.shields.io/github/stars/Arena-Rosnav/arena-rosnav?style=social" alt="GitHub stars"></a>
 <span class="abstract-content">Building upon our previous contributions, this paper introduces Arena 3.0, an extension of Arena-Bench, Arena 1.0, and Arena 2.0. Arena 3.0 is a comprehensive software stack containing multiple modules and simulation environments focusing on the development, simulation, and benchmarking of social navigation approaches in collaborative environments. We significantly enhance the realism of human behavior simulation by incorporating a diverse array of new social force models and interaction patterns, encompassing both human-human and human-robot dynamics. The platform provides a comprehensive set of new task modes, designed for extensive benchmarking and testing and is capable of generating realistic and human-centric environments dynamically, catering to a broad spectrum of social navigation scenarios. In addition, the platform's functionalities have been abstracted across three widely used simulators, each tailored for specific training and testing purposes. The platform's efficacy has been validated through an extensive benchmark and user evaluations of the platform by a global community of researchers and students, which noted the substantial improvement compared to previous versions and expressed interests to utilize the platform for future research and development.</span>
 <span class="bibtex-content">@article{kastner2024arena,<br>  title={Arena 3.0: Advancing social navigation in collaborative and highly dynamic environments},<br>  author={Kästner, Linh and Shcherbyna, Volodymyir and Zeng, Huajian and Le, Tuan Anh and Schreff, Maximilian Ho-Kyoung and Osmaev, Halid and Tran, Nam Truong and Diaz, Diego and Golebiowski, Jan and Soh, Harold and others},<br>  journal={arXiv preprint arXiv:2406.00837},<br>  year={2024}<br>}</span>
 
@@ -362,13 +389,14 @@ Linh Kästner, Reyk Carstens, **Huajian Zeng**, Jacek Kmiecik, Tuan Anh Le, Teha
 
 [**Arena-Rosnav 2.0: A Development and Benchmarking Platform for Robot Navigation in Highly Dynamic Environments**](https://arxiv.org/abs/2302.10023)
 
-Linh Kästner, Reyk Carstens, **Huajian Zeng**, Jacek Kmiecik, Tuan Anh Le, Teham Bhuiyan, Boris Meinardus, Jens Lambrecht
+Linh Kästner, Reyk Carstens, **Huajian Zeng**, Jacek Kmiecik, Tuan Anh Le, Teham Bhuiyan, Boris Meinardus, Jens Lambrecht<br>
+<span class="pub-venue"><a href="https://ieee-iros.org/">IEEE/RSJ International Conference on Intelligent Robots and Systems (<b>IROS 2023</b>)</a></span>
 
-[[webpage]](https://github.com/Arena-Rosnav)
-[[pdf]](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10342152)
-<span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
-<span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
-[[code]](https://github.com/Arena-Rosnav/arena-rosnav)
+<a href="https://github.com/Arena-Rosnav"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10342152"><i class="fas fa-file-pdf"></i>PDF</a> /
+<span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
+<span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
+<a href="https://github.com/Arena-Rosnav/arena-rosnav"><i class="fab fa-github"></i>Code</a> <a class="github-stars" href="https://github.com/Arena-Rosnav/arena-rosnav/stargazers"><img src="https://img.shields.io/github/stars/Arena-Rosnav/arena-rosnav?style=social" alt="GitHub stars"></a>
 <span class="abstract-content">Following up on our previous works, in this paper, we present Arena-Rosnav 2.0 an extension to our previous works Arena-Bench and Arena-Rosnav, which adds a variety of additional modules for developing and benchmarking robotic navigation approaches. The platform is fundamentally restructured and provides unified APIs to add additional functionalities such as planning algorithms, simulators, or evaluation functionalities. We have included more realistic simulation and pedestrian behavior and provide a profound documentation to lower the entry barrier. We evaluated our system by first, conducting a user study in which we asked experienced researchers as well as new practitioners and students to test our system. The feedback was mostly positive and a high number of participants are utilizing our system for other research endeavors. Finally, we demonstrate the feasibility of our system by integrating two new simulators and a variety of state of the art navigation approaches and benchmark them against one another.</span>
 <span class="bibtex-content">@inproceedings{kastner2023arena,<br>  title={Arena-rosnav 2.0: A development and benchmarking platform for robot navigation in highly dynamic environments},<br>  author={Kästner, Linh and Carstens, Reyk and Zeng, Huajian and Kmiecik, Jacek and Bhuiyan, Teham and Khorsandhi, Niloufar and Shcherbyna, Volodymyir and Lambrecht, Jens},<br>  booktitle={2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},<br>  pages={11257--11264},<br>  year={2023},<br>  organization={IEEE}<br>}</span>
 
@@ -382,13 +410,13 @@ Linh Kästner, Reyk Carstens, **Huajian Zeng**, Jacek Kmiecik, Tuan Anh Le, Teha
 
 [**Efficient 2D Simulators for Deep-Reinforcement-Learning-based Training of Navigation Approaches**](https://ieeexplore.ieee.org/abstract/document/10202268)
 
-**Huajian Zeng**, Linh Kästner, Jens Lambrecht
+**Huajian Zeng**, Linh Kästner, Jens Lambrecht<br>
+<span class="pub-venue"><a href="http://2023.ubiquitousrobots.org/">International Conference on Ubiquitous Robots (<b>UR 2023</b>)</a></span>
 
-[[webpage]](https://github.com/Arena-Rosnav)
-[[pdf]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10202268)
-<span class="abstract-toggle" onclick="toggleAbstract(this)">[abstract]</span>
-<span class="bibtex-toggle" onclick="toggleBibtex(this)">[bibtex]</span>
-[[code]](https://github.com/Arena-Rosnav/arena2d)
+<a href="https://github.com/Arena-Rosnav"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10202268"><i class="fas fa-file-pdf"></i>PDF</a> /
+<span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
+<span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span>
 <span class="abstract-content">In recent years, Deep Reinforcement Learning (DRL) has emerged as a competitive approach for mobile robot navigation. However, training DRL agents often comes at the cost of difficult and tedious training procedures in which powerful hardware is required to conduct oftentimes long training runs. Especially, for complex environments, this proves to be a major bottleneck for widespread adoption of DRL approaches into industries. In this paper we integrate an efficient 2D simulator into the Arena-Rosnav framework of our previous work as an alternative simulation platform to train and develop DRL agents. Therefore, we utilized the provided API to integrate necessary components into the ecosystem of Arena-Rosnav. We evaluated our simulator by training a DRL agent within that platform and compared the training and navigational performance against the baseline 2D simulator Flatland, which is the default simulating platform of Arena-Rosnav. Results demonstrate that using our Arena2D simulator results in substantially faster training times and in some scenarios better agents. This proves to be an important step towards resource-efficient DRL training, which accelerates training times and improve the development cycle of DRL agents for navigation tasks.</span>
 <span class="bibtex-content">@inproceedings{zeng2023efficient,<br>  title={Efficient 2D Simulators for Deep-Reinforcement-Learning-based Training of Navigation Approaches},<br>  author={Zeng, Huajian and Kästner, Linh and Lambrecht, Jens},<br>  booktitle={2023 20th International Conference on Ubiquitous Robots (UR)},<br>  pages={275--280},<br>  year={2023},<br>  organization={IEEE}<br>}</span>
 
