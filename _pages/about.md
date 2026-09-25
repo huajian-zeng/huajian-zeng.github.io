@@ -37,6 +37,7 @@ My research interests focus on 3D computer vision and human/hand-object interact
 <div id="news-container">
 <ul>
 <li><em>2026.09</em>: &nbsp;🎉 Our papers <a href="https://huajian-zeng.github.io/projects/flowhoi">FlowHOI</a> and <a href="https://huajian-zeng.github.io/projects/stablehand">StableHand</a> got accepted in <a href="https://neurips.cc/Conferences/2026">NeurIPS 2026</a> in Sydney, Australia.</li>
+<li><em>2026.09</em>: &nbsp;🎉 Our survey on world-action models for robot learning and control is available on <a href="https://arxiv.org/abs/2609.16074">arXiv</a>.</li>
 <li><em>2026.05</em>: &nbsp;🎉 Our latest work on quality-aware hand motion estimation from egocentric video is available on <a href="https://arxiv.org/abs/2605.18553">arXiv</a>.</li>
 <li><em>2026.04</em>: &nbsp;🎉 Our paper on feature-free initialization for monocular visual-inertial systems got accepted in <a href="https://roboticsconference.org/2026/">RSS 2026</a> in Sydney, Australia.</li>
 <li><em>2026.02</em>: &nbsp;🎉 Our paper on egocentric object motion generation got accepted in <a href="https://cvpr.thecvf.com/Conferences/2026">CVPR 2026</a> in Denver, USA.</li>
@@ -59,10 +60,10 @@ My research interests focus on 3D computer vision and human/hand-object interact
 </div>
 
 <style>
-#news-container ul li:nth-child(n+7) {
+#news-container ul li:nth-child(n+6) {
   display: none;
 }
-#news-container.expanded ul li:nth-child(n+7) {
+#news-container.expanded ul li:nth-child(n+6) {
   display: list-item;
 }
 #news-toggle {
@@ -199,6 +200,26 @@ function toggleBibtex(element) {
 <a href="https://youtu.be/c_ayPvccyi8"><i class="fab fa-youtube"></i>Video</a>
 <span class="abstract-content">Recent vision-language-action (VLA) models can generate plausible end-effector motions, yet they often fail in long-horizon, contact-rich tasks because the underlying hand-object interaction (HOI) structure is not explicitly represented. We propose FlowHOI, a two-stage flow-matching framework that generates semantically grounded, temporally coherent HOI sequences, comprising hand poses, object poses, and hand-object contact states, conditioned on an egocentric observation, a language instruction, and a 3D Gaussian splatting (3DGS) scene reconstruction. We decouple geometry-centric grasping from semantics-centric manipulation, conditioning the latter on compact 3D scene tokens and a motion–text alignment loss to semantically ground the generated interactions in both the physical scene layout and the language instruction. To address the scarcity of high-fidelity HOI supervision, we introduce a reconstruction pipeline that recovers aligned hand-object trajectories and meshes from large-scale egocentric videos, yielding an HOI prior for robust generation. Across the GRAB and HOT3D benchmarks, FlowHOI achieves the highest action recognition accuracy and a 1.7× higher physics simulation success rate than the strongest diffusion-based baseline, while delivering a 40× inference speedup. We further demonstrate real-robot execution on four dexterous manipulation tasks, illustrating the feasibility of retargeting generated HOI representations to real-robot execution pipelines.</span>
 <span class="bibtex-content">@inproceedings{zeng2026flowhoi,<br>  title={FlowHOI: Flow-based Semantics-Grounded Generation of Hand-Object Interactions for Dexterous Robot Manipulation},<br>  author={Zeng, Huajian and Chen, Lingyun and Yang, Jiaqi and Zhang, Yuantai and Shi, Fan and Liu, Peidong and Zuo, Xingxing},<br>  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},<br>  year={2026}<br>}</span>
+
+</div>
+</div>
+
+<!-- 14 -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='images/wam_survey.png' alt="sym" width="500" height="300"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[**World-Action Models for Robot Learning and Control: A Survey**](https://arxiv.org/abs/2609.16074)
+
+Zuxing Lu\*, Hongjia Zhai\*, Guanzhi Wang, **Huajian Zeng**, Jiaqi Yang, Jingyu Liu, Lei Cheng, Yuantai Zhang, Yuheng Qiu, Zezhou Cheng, Ivan Laptev, Danfei Xu, Benjamin Riviere, Giuseppe Loianno, Eric Xing, Xingxing Zuo<br>
+<span class="pub-venue"><a href="https://arxiv.org/abs/2609.16074">arXiv preprint (<b>arXiv 2026</b>)</a></span>
+
+<a href="https://rcl-robotics.github.io/Awesome-World-Action-Models/"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://arxiv.org/pdf/2609.16074"><i class="fas fa-file-pdf"></i>PDF</a> /
+<span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
+<span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
+<a href="https://github.com/RCL-Robotics/Awesome-World-Action-Models"><i class="fab fa-github"></i>Paper List</a> <a class="github-stars" href="https://github.com/RCL-Robotics/Awesome-World-Action-Models/stargazers"><img src="https://img.shields.io/github/stars/RCL-Robotics/Awesome-World-Action-Models?style=social" alt="GitHub stars"></a>
+<span class="abstract-content">Robots operating in open environments act under partial observability, physical constraints, and dynamic task contexts. Beyond mapping observations and language instructions to actions, they must anticipate how candidate actions may affect future states and task-relevant outcomes. Recent advances in world models, video generation, and Vision-Language-Action (VLA) policies have motivated the development of World-Action Models (WAMs), which couple future world prediction with executable action generation. This survey provides a robotics-oriented review of WAMs. We clarify their scope relative to conventional world models, model-based reinforcement learning, action-conditioned video generation, and reactive VLA policies, and organize existing methods through a unified taxonomy covering representations, transition modeling, action interfaces, architectures, training pipelines, data modalities, and scaling strategies. We further review applications of WAMs in manipulation, navigation, and autonomous driving, and we summarize the datasets, benchmarks, metrics, and protocols used to evaluate WAM systems. Finally, we discuss key challenges in action alignment, world-action factorization, spatial and multi-view consistency, long-horizon memory, neural simulation for closed-loop policy learning, and efficient inference. Taken together, this survey aims to provide a concise technical foundation for integrating predictive world modeling with action generation, toward more reliable embodied robot intelligence.</span>
+<span class="bibtex-content">@misc{lu2026worldactionmodels,<br>  title={World-Action Models for Robot Learning and Control: A Survey},<br>  author={Zuxing Lu and Hongjia Zhai and Guanzhi Wang and Huajian Zeng and Jiaqi Yang and Jingyu Liu and Lei Cheng and Yuantai Zhang and Yuheng Qiu and Zezhou Cheng and Ivan Laptev and Danfei Xu and Benjamin Riviere and Giuseppe Loianno and Eric Xing and Xingxing Zuo},<br>  year={2026},<br>  eprint={2609.16074},<br>  archivePrefix={arXiv},<br>  primaryClass={cs.RO},<br>  url={https://arxiv.org/abs/2609.16074}<br>}</span>
 
 </div>
 </div>
