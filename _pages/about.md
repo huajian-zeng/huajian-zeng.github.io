@@ -23,7 +23,7 @@ I am a first year PhD student in Robotics at the [Mohamed bin Zayed University o
 During my studies, I was student research assistant at the [TUM Computer Vision Group](https://cvg.cit.tum.de/), working with [Prof. Daniel Cremers](https://cvg.cit.tum.de/members/cremers) and [Dr. Xi Wang](https://xiwang1212.github.io/homepage/). I also collaborate closely with [Kaixin Bai](https://baikaixin-public.github.io/) and [Lei Zhang](https://leizhang-public.github.io/) at the [Agile Robots](https://www.agile-robots.com/en/). In addition, I worked extensively with [Dr. Linh Kästner](https://linhdoan.io/) on several projects in social navigation for mobile robots at [TUB](https://www.tu.berlin/) and [NUS](https://www.nus.edu.sg/).
 
 <!-- research interest: 从视频中学习复杂的机器人操作 -->
-My research interests focus on 3D computer vision and human/hand-object interaction, aiming to teach robots to better perceive and understand the 3D world for complex manipulation tasks.
+My research interests focus on 3D computer vision and hand-object interaction, aiming to teach robots to better perceive and understand the 3D world for complex manipulation tasks.
 
 
 
@@ -426,7 +426,7 @@ Linh Kästner, Reyk Carstens, **Huajian Zeng**, Jacek Kmiecik, Tuan Anh Le, Teha
 
 
 <!-- 1 -->
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Ubiquitous Robots 2023</div><img src='images/ur.jpg' alt="sym" width="500" height="300"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">UR 2023</div><img src='images/ur.jpg' alt="sym" width="500" height="300"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [**Efficient 2D Simulators for Deep-Reinforcement-Learning-based Training of Navigation Approaches**](https://ieeexplore.ieee.org/abstract/document/10202268)
