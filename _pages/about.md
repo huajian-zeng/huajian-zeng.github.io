@@ -89,7 +89,7 @@ My research interests focus on 3D computer vision and hand-object interaction, a
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-left: 3px solid #224b8d;
-  font-size: 0.9em;
+  font-size: 1em;
   max-width: 600px;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
 }
@@ -112,8 +112,12 @@ My research interests focus on 3D computer vision and hand-object interaction, a
 .paper-box-text strong {
   color: #224b8d;
 }
+/* Resource links: slightly smaller so each paper's links fit on one line */
+.paper-box-text p:has(> .abstract-toggle) {
+  font-size: 0.9em;
+}
 .paper-box-text a i, .abstract-toggle i, .bibtex-toggle i {
-  margin-right: 4px;
+  margin-right: 3px;
 }
 .paper-box-text .pub-venue a {
   color: #c0392b;
@@ -123,7 +127,7 @@ My research interests focus on 3D computer vision and hand-object interaction, a
 }
 .github-stars img {
   display: inline-block;
-  height: 18px;
+  height: 17px;
   width: auto;
   vertical-align: -3px;
 }
@@ -160,7 +164,7 @@ function toggleBibtex(element) {
 # 📝 Publications 
 
 <!-- pub with images -->
-<!-- Resource order: webpage, pdf, abstract, bibtex, code, video. Each resource is an icon + label, separated by " / "; code is followed by a GitHub stars badge. Omit unavailable resources; link official repositories as code even when the source release is pending. -->
+<!-- Resource order: webpage, arxiv, pdf, abstract, bibtex, code, video. Each resource is an icon + label, separated by " / "; code is followed by a GitHub stars badge. Omit unavailable resources; link official repositories as code even when the source release is pending. -->
 
 <!-- 12 -->
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS 2026</div><img src='images/stablehand.gif' alt="sym" width="500" height="300"></div></div>
@@ -172,6 +176,7 @@ function toggleBibtex(element) {
 <span class="pub-venue"><a href="https://neurips.cc/Conferences/2026">Conference on Neural Information Processing Systems (<b>NeurIPS 2026</b>)</a></span>
 
 <a href="https://huajian-zeng.github.io/projects/stablehand"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://arxiv.org/abs/2605.18553"><i class="ai ai-arxiv"></i>arXiv</a> /
 <a href="https://arxiv.org/pdf/2605.18553"><i class="fas fa-file-pdf"></i>PDF</a> /
 <span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
 <span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
@@ -193,6 +198,7 @@ function toggleBibtex(element) {
 <span class="pub-venue"><a href="https://neurips.cc/Conferences/2026">Conference on Neural Information Processing Systems (<b>NeurIPS 2026</b>)</a></span>
 
 <a href="https://huajian-zeng.github.io/projects/flowhoi"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://arxiv.org/abs/2602.13444"><i class="ai ai-arxiv"></i>arXiv</a> /
 <a href="https://arxiv.org/pdf/2602.13444"><i class="fas fa-file-pdf"></i>PDF</a> /
 <span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
 <span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
@@ -214,6 +220,7 @@ Zuxing Lu\*, Hongjia Zhai\*, Guanzhi Wang, **Huajian Zeng**, Jiaqi Yang, Jingyu 
 <span class="pub-venue"><a href="https://arxiv.org/abs/2609.16074">arXiv preprint (<b>arXiv 2026</b>)</a></span>
 
 <a href="https://rcl-robotics.github.io/Awesome-World-Action-Models/"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://arxiv.org/abs/2609.16074"><i class="ai ai-arxiv"></i>arXiv</a> /
 <a href="https://arxiv.org/pdf/2609.16074"><i class="fas fa-file-pdf"></i>PDF</a> /
 <span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
 <span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
@@ -233,6 +240,7 @@ Zuxing Lu\*, Hongjia Zhai\*, Guanzhi Wang, **Huajian Zeng**, Jiaqi Yang, Jingyu 
 Yuantai Zhang, Jiaqi Yang, **Huajian Zeng**, Changhao Chen, Haoang Li, Liang Li, Dezhen Song, Xingxing Zuo<br>
 <span class="pub-venue"><a href="https://roboticsconference.org/2026/">Robotics: Science and Systems (<b>RSS 2026</b>)</a></span>
 
+<a href="https://arxiv.org/abs/2605.17327"><i class="ai ai-arxiv"></i>arXiv</a> /
 <a href="https://arxiv.org/pdf/2605.17327"><i class="fas fa-file-pdf"></i>PDF</a> /
 <span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
 <span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
@@ -254,6 +262,7 @@ Abhishek Saroha, **Huajian Zeng**, Xingxing Zuo, Daniel Cremers, Xi Wang<br>
 <span class="pub-venue"><a href="https://cvpr.thecvf.com/Conferences/2026">IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR 2026</b>)</a></span>
 
 <a href="https://abhi-rf.github.io/egoflow/"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://arxiv.org/abs/2604.01421"><i class="ai ai-arxiv"></i>arXiv</a> /
 <a href="https://arxiv.org/pdf/2604.01421"><i class="fas fa-file-pdf"></i>PDF</a> /
 <span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
 <span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
@@ -274,6 +283,7 @@ Kaixin Bai, **Huajian Zeng**, Lei Zhang, Yiwen Liu, Hongli Xu, Zhaopeng Chen, Ji
 <span class="pub-venue"><a href="https://2026.ieee-icra.org/">IEEE International Conference on Robotics and Automation (<b>ICRA 2026</b>)</a></span>
 
 <a href="https://sites.google.com/view/cleardepth/"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://arxiv.org/abs/2409.08926"><i class="ai ai-arxiv"></i>arXiv</a> /
 <a href="https://arxiv.org/pdf/2409.08926"><i class="fas fa-file-pdf"></i>PDF</a> /
 <span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
 <span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
@@ -293,6 +303,7 @@ Kaixin Bai, **Huajian Zeng**, Lei Zhang, Yiwen Liu, Hongli Xu, Zhaopeng Chen, Ji
 <span class="pub-venue"><a href="https://3dvconf.github.io/2026/">International Conference on 3D Vision (<b>3DV 2026</b>)</a></span>
 
 <a href="https://huajian-zeng.github.io/projects/gmt"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://arxiv.org/abs/2603.17993"><i class="ai ai-arxiv"></i>arXiv</a> /
 <a href="https://arxiv.org/pdf/2603.17993"><i class="fas fa-file-pdf"></i>PDF</a> /
 <span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
 <span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
@@ -328,18 +339,19 @@ Volodymyr Shcherbyna\*, Linh Kästner\*, Duc Anh Do, Jiaming Wang, Huu Giang Ngu
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">RSS 2025</div><img src='images/rss25.jpg' alt="sym" width="500" height="300"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[**Arena 5.0: A Photorealistic ROS2 Simulation Framework for Developing and Benchmarking Social Navigation**](https://www.roboticsproceedings.org/rss21/p092.pdf)
+[**Demonstrating Arena 5.0: A Photorealistic ROS2 Simulation Framework for Developing and Benchmarking Social Navigation**](https://arxiv.org/abs/2610.11220)
 
 Volodymyr Shcherbyna\*, Linh Kästner\*, Duc Anh Do, Hoang Tung, Huu Giang Nguyen, Maximilian Ho-Kyoung Schreff, Tim Seeger, Eva Wiese, Ahmed Martban, **Huajian Zeng**, An Tran, Nguyen Quoc Hung, Jonas Kreutz, Vu Thanh Lam, Ton Manh Kien, Harold Soh<br>
 <span class="pub-venue"><a href="https://roboticsconference.org/2025/">Robotics: Science and Systems (<b>RSS 2025</b>)</a></span>
 
 <a href="https://github.com/Arena-Rosnav"><i class="fas fa-globe"></i>Webpage</a> /
-<a href="https://www.roboticsproceedings.org/rss21/p092.pdf"><i class="fas fa-file-pdf"></i>PDF</a> /
+<a href="https://arxiv.org/abs/2610.11220"><i class="ai ai-arxiv"></i>arXiv</a> /
+<a href="https://arxiv.org/pdf/2610.11220"><i class="fas fa-file-pdf"></i>PDF</a> /
 <span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
 <span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
 <a href="https://github.com/Arena-Rosnav/arena-rosnav"><i class="fab fa-github"></i>Code</a> <a class="github-stars" href="https://github.com/Arena-Rosnav/arena-rosnav/stargazers"><img src="https://img.shields.io/github/stars/Arena-Rosnav/arena-rosnav?style=social" alt="GitHub stars"></a>
-<span class="abstract-content">Building upon the foundations laid by our previous work, this paper introduces Arena 5.0, the fifth iteration of our framework for robotics social navigation development and benchmarking. Arena 5.0 provides three main contributions: 1) The complete integration of NVIDIA Isaac Gym, enabling photorealistic simulations and more efficient training. It seamlessly incorporates Isaac Gym into the Arena platform, allowing the use of existing modules such as randomized environment generation, evaluation tools, ROS2 support, and the integration of planners, robot models, and APIs within Isaac Gym. 2) A comprehensive benchmark of state-of-the-art social navigation strategies, evaluated on a diverse set of generated and customized worlds and scenarios of varying difficulty levels. These benchmarks provide a detailed assessment of navigation planners using a wide range of social navigation metrics. 3) Extensive scenario generation and task planning modules for improved and customizable generation of social navigation scenarios, such as emergency and rescue situations. The platform's performance was evaluated by generating the aforementioned benchmark and through a comprehensive user study, demonstrating significant improvements in usability and efficiency compared to previous versions.</span>
-<span class="bibtex-content">@inproceedings{shcherbyna2025arena5,<br>  title={Arena 5.0: A Photorealistic ROS2 Simulation Framework for Developing and Benchmarking Social Navigation},<br>  author={Shcherbyna, Volodymyr and Kästner, Linh and Do, Duc Anh and Tung, Hoang and Nguyen, Huu Giang and Schreff, Maximilian Ho-Kyoung and Seeger, Tim and Wiese, Eva and Martban, Ahmed and Zeng, Huajian and Tran, An and Hung, Nguyen Quoc and Kreutz, Jonas and Lam, Vu Thanh and Kien, Ton Manh and Soh, Harold},<br>  booktitle={Robotics: Science and Systems (RSS)},<br>  year={2025}<br>}</span>
+<span class="abstract-content">Building upon the foundations laid by our previous work, this paper introduces Arena 5.0, the fifth iteration of our framework for robotics social navigation development and benchmarking. Arena 5.0 provides three main contributions: 1) The complete integration of NVIDIA Isaac Gym, enabling photorealistic simulations and more efficient training. It seamlessly incorporates Isaac Gym into the Arena platform, allowing the use of existing modules such as randomized environment generation, evaluation tools, ROS2 support, and the integration of planners, robot models, and APIs within Isaac Gym. 2) A comprehensive benchmark of state-of-the-art social navigation strategies, evaluated on a diverse set of generated and customized worlds and scenarios of varying difficulty levels. These benchmarks provide a detailed assessment of navigation planners using a wide range of social navigation metrics. 3) Extensive scenario generation and task planning modules for improved and customizable generation of social navigation scenarios, such as emergency and rescue situations. The platform's performance was evaluated by generating the aforementioned benchmark and through a comprehensive user study, demonstrating significant improvements in usability and efficiency compared to previous versions. Arena 5.0 is open source and available at https://github.com/Arena-Rosnav.</span>
+<span class="bibtex-content">@inproceedings{shcherbyna2025arena5,<br>  title={Demonstrating Arena 5.0: A Photorealistic ROS2 Simulation Framework for Developing and Benchmarking Social Navigation},<br>  author={Shcherbyna, Volodymyr and Kästner, Linh and Do, Duc Anh and Tung, Hoang and Nguyen, Huu Giang and Schreff, Maximilian Ho-Kyoung and Seeger, Tim and Wiese, Eva and Martban, Ahmed and Zeng, Huajian and Tran, An and Hung, Nguyen Quoc and Kreutz, Jonas and Lam, Vu Thanh and Kien, Ton Manh and Soh, Harold},<br>  booktitle={Robotics: Science and Systems (RSS)},<br>  year={2025}<br>}</span>
 
 </div>
 </div>
@@ -354,6 +366,7 @@ Volodymyr Shcherbyna\*, Linh Kästner\*, Duc Anh Do, Hoang Tung, Huu Giang Nguye
 <span class="pub-venue"><a href="https://3dvconf.github.io/2025/">International Conference on 3D Vision (<b>3DV 2025</b>)</a></span>
 
 <a href="https://huajian-zeng.github.io/projects/coe"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://arxiv.org/abs/2412.05557"><i class="ai ai-arxiv"></i>arXiv</a> /
 <a href="https://arxiv.org/pdf/2412.05557"><i class="fas fa-file-pdf"></i>PDF</a> /
 <span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
 <span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
@@ -374,6 +387,7 @@ Volodymyr Shcherbyna, Linh Kästner, Diego Diaz, Huu Giang Nguyen, Maximilian Ho
 <span class="pub-venue"><a href="https://2025.ieee-icra.org/">IEEE International Conference on Robotics and Automation (<b>ICRA 2025</b>)</a></span>
 
 <a href="https://github.com/Arena-Rosnav"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://arxiv.org/abs/2409.12471"><i class="ai ai-arxiv"></i>arXiv</a> /
 <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11127635"><i class="fas fa-file-pdf"></i>PDF</a> /
 <span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
 <span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
@@ -394,6 +408,7 @@ Linh Kästner, Reyk Carstens, **Huajian Zeng**, Jacek Kmiecik, Tuan Anh Le, Teha
 <span class="pub-venue"><a href="https://roboticsconference.org/2024/">Robotics: Science and Systems (<b>RSS 2024</b>)</a></span>
 
 <a href="https://github.com/Arena-Rosnav"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://arxiv.org/abs/2406.00837"><i class="ai ai-arxiv"></i>arXiv</a> /
 <a href="https://roboticsproceedings.org/rss20/p074.pdf"><i class="fas fa-file-pdf"></i>PDF</a> /
 <span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
 <span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
@@ -414,6 +429,7 @@ Linh Kästner, Reyk Carstens, **Huajian Zeng**, Jacek Kmiecik, Tuan Anh Le, Teha
 <span class="pub-venue"><a href="https://ieee-iros.org/">IEEE/RSJ International Conference on Intelligent Robots and Systems (<b>IROS 2023</b>)</a></span>
 
 <a href="https://github.com/Arena-Rosnav"><i class="fas fa-globe"></i>Webpage</a> /
+<a href="https://arxiv.org/abs/2302.10023"><i class="ai ai-arxiv"></i>arXiv</a> /
 <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10342152"><i class="fas fa-file-pdf"></i>PDF</a> /
 <span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
 <span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span> /
