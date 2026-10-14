@@ -36,6 +36,7 @@ My research interests focus on 3D computer vision and hand-object interaction, a
 # 🔥 News
 <div id="news-container">
 <ul>
+<li><em>2026.10</em>: &nbsp;🎉 Our latest work on predictive recovery for vision-language-action policies is available on <a href="https://arxiv.org/abs/2610.18650">arXiv</a>.</li>
 <li><em>2026.09</em>: &nbsp;🎉 Our papers <a href="https://huajian-zeng.github.io/projects/flowhoi">FlowHOI</a> and <a href="https://huajian-zeng.github.io/projects/stablehand">StableHand</a> got accepted in <a href="https://neurips.cc/Conferences/2026">NeurIPS 2026</a> in Sydney, Australia.</li>
 <li><em>2026.09</em>: &nbsp;🎉 Our survey on world-action models for robot learning and control is available on <a href="https://arxiv.org/abs/2609.16074">arXiv</a>.</li>
 <li><em>2026.05</em>: &nbsp;🎉 Our latest work on quality-aware hand motion estimation from egocentric video is available on <a href="https://arxiv.org/abs/2605.18553">arXiv</a>.</li>
@@ -206,6 +207,25 @@ function toggleBibtex(element) {
 <a href="https://youtu.be/c_ayPvccyi8"><i class="fab fa-youtube"></i>Video</a>
 <span class="abstract-content">Recent vision-language-action (VLA) models can generate plausible end-effector motions, yet they often fail in long-horizon, contact-rich tasks because the underlying hand-object interaction (HOI) structure is not explicitly represented. We propose FlowHOI, a two-stage flow-matching framework that generates semantically grounded, temporally coherent HOI sequences, comprising hand poses, object poses, and hand-object contact states, conditioned on an egocentric observation, a language instruction, and a 3D Gaussian splatting (3DGS) scene reconstruction. We decouple geometry-centric grasping from semantics-centric manipulation, conditioning the latter on compact 3D scene tokens and a motion–text alignment loss to semantically ground the generated interactions in both the physical scene layout and the language instruction. To address the scarcity of high-fidelity HOI supervision, we introduce a reconstruction pipeline that recovers aligned hand-object trajectories and meshes from large-scale egocentric videos, yielding an HOI prior for robust generation. Across the GRAB and HOT3D benchmarks, FlowHOI achieves the highest action recognition accuracy and a 1.7× higher physics simulation success rate than the strongest diffusion-based baseline, while delivering a 40× inference speedup. We further demonstrate real-robot execution on four dexterous manipulation tasks, illustrating the feasibility of retargeting generated HOI representations to real-robot execution pipelines.</span>
 <span class="bibtex-content">@inproceedings{zeng2026flowhoi,<br>  title={FlowHOI: Flow-based Semantics-Grounded Generation of Hand-Object Interactions for Dexterous Robot Manipulation},<br>  author={Zeng, Huajian and Chen, Lingyun and Yang, Jiaqi and Zhang, Yuantai and Shi, Fan and Liu, Peidong and Zuo, Xingxing},<br>  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},<br>  year={2026}<br>}</span>
+
+</div>
+</div>
+
+<!-- 15 -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint</div><img src='images/forkcast.png' alt="sym" width="500" height="300"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[**ForkCast: Predictive Recovery for Vision-Language-Action Policies via Counterfactual Futures**](https://arxiv.org/abs/2610.18650)
+
+Chenru Wen\*, **Huajian Zeng**\*, Haokai Ding, Jian Kang, Anqing Duan, Dawei Zhou, Dezhen Song, Xingxing Zuo<br>
+<span class="pub-venue"><a href="https://arxiv.org/abs/2610.18650">arXiv preprint (<b>arXiv 2026</b>)</a></span>
+
+<a href="https://arxiv.org/abs/2610.18650"><i class="ai ai-arxiv"></i>arXiv</a> /
+<a href="https://arxiv.org/pdf/2610.18650"><i class="fas fa-file-pdf"></i>PDF</a> /
+<span class="abstract-toggle" onclick="toggleAbstract(this)"><i class="fas fa-align-left"></i>Abstract</span> /
+<span class="bibtex-toggle" onclick="toggleBibtex(this)"><i class="fas fa-quote-right"></i>BibTeX</span>
+<span class="abstract-content">Vision-language-action (VLA) policies perform manipulation tasks using camera images and language instructions, but object slip or visual occlusion can disrupt execution. Recovery is typically learned during policy training or delegated to a monitor that triggers a scripted repair after detecting a failure. We introduce ForkCast, a predictive recovery framework that compares counterfactual futures to determine whether and how to intervene in a frozen VLA policy. At each decision point, ForkCast evaluates three candidates: executing the policy's nominal action chunk (Commit), adjusting the camera viewpoint (Reobserve), and replanning the arm trajectory (Replan). A candidate-conditioned world model forecasts the latent outcome of each candidate at a common future horizon, and a shared task-progress head scores the predicted outcomes. By evaluating the policy's own continuation alongside the repair candidates, a single comparison based on task progress determines both whether and how to intervene, without a failure detector, an intervention threshold, or updates to the VLA backbone. On five simulated RoboTwin 2.0 tasks with injected occlusion and object slip, ForkCast increases pooled success from 13.3% for the frozen π<sub>0.5</sub> policy to 30.0% and transfers to two additional VLA backbones without updating ForkCast. After adaptation on real-robot candidate rollouts, ForkCast also improves success over the base policy under both clean and visibility-limited conditions. Code will be released to benefit the research community.</span>
+<span class="bibtex-content">@article{wen2026forkcast,<br>  title={ForkCast: Predictive Recovery for Vision-Language-Action Policies via Counterfactual Futures},<br>  author={Wen, Chenru and Zeng, Huajian and Ding, Haokai and Kang, Jian and Duan, Anqing and Zhou, Dawei and Song, Dezhen and Zuo, Xingxing},<br>  journal={arXiv preprint arXiv:2610.18650},<br>  year={2026}<br>}</span>
 
 </div>
 </div>
